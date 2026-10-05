@@ -3,7 +3,96 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#13252b"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="logo-pp.png?v=3"><link rel="stylesheet" href="styles.css"><style>.mark{overflow:hidden;background:#fff}.mark img{width:100%;height:100%;object-fit:contain}.auth-gate{position:fixed;z-index:50;inset:0;display:grid;place-items:center;padding:20px;background:#13252bef}.auth-gate[hidden]{display:none}.auth-card{width:min(420px,100%);background:#fff;border-radius:15px;padding:34px}.auth-card .brand{margin:0 0 28px}.auth-card h1{font-size:25px;margin-bottom:9px}.auth-card>p{color:#69767a;line-height:1.5;margin-bottom:22px}.auth-card form{display:grid;gap:15px}.auth-card form .button{margin-top:5px}.auth-card .link{margin-top:18px}.auth-message{font-size:12px!important;margin:13px 0 0!important;color:#d75555!important}.auth-message.ok{color:#1c8b6d!important}</style>
+  <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="logo-pp.png?v=3"><style>
+:root{--ink:#14262c;--muted:#69767a;--line:#e5e9e7;--paper:#f7f8f6;--white:#fff;--accent:#dd6b3d;--green:#1c8b6d;--amber:#e3a531;--red:#d75555;--nav:#13252b}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.sidebar{position:fixed;inset:0 auto 0 0;width:268px;padding:27px 17px;background:var(--nav);color:#d8e1df;display:flex;flex-direction:column;z-index:5}.brand{display:flex;gap:12px;align-items:center;margin:0 8px 34px}.brand b{letter-spacing:.08em;font-size:14px}.brand small{display:block;color:#8da09d;font-size:10px;margin-top:3px}.mark{display:grid;place-items:center;background:var(--accent);border-radius:9px;width:37px;height:37px;color:#fff;font-weight:800}.nav{border:0;background:transparent;color:#aab9b6;border-radius:8px;text-align:left;padding:12px 13px;width:100%;font-size:14px;cursor:pointer;margin:2px 0}.nav span{margin-left:9px}.nav:hover,.nav.active{background:#244148;color:#fff}.side-foot{margin-top:auto;border-top:1px solid #28434a;padding:18px 10px 3px;color:#91a29f;font-size:11px}.online-dot{display:inline-block;width:7px;height:7px;background:#44b996;border-radius:50%;margin-right:7px}main{margin-left:268px;min-height:100vh}header{height:106px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:20px 42px}h1,h2,h3,p{margin:0}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--muted);margin-bottom:7px}h1{font-size:26px;letter-spacing:-.035em}.header-actions{display:flex;align-items:center;gap:12px}.icon{border:0;background:transparent;color:var(--ink);font-size:23px;cursor:pointer;width:37px;height:37px;border-radius:8px}.icon:hover{background:#eef2f0}.avatar{border:0;background:#e5f0eb;color:var(--green);font-weight:800;border-radius:50%;width:37px;height:37px}#app{padding:34px 42px;max-width:1500px}.button{border:0;border-radius:8px;font-size:13px;font-weight:750;padding:11px 15px;cursor:pointer}.primary{background:var(--accent);color:white}.secondary{background:#edf0ee;color:var(--ink)}.view-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:23px}.view-head h2{font-size:21px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:30px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:19px;box-shadow:0 2px 8px #18322c08}.stat-label{font-weight:700;color:var(--muted);font-size:12px}.stat-value{font-size:30px;font-weight:780;margin:10px 0 6px;letter-spacing:-.05em}.change{font-size:12px;color:var(--green)}.dashboard-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:20px}.stack{display:grid;gap:20px}.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:21px}.panel h3{font-size:15px;margin-bottom:17px}.project-row,.alert-row,.activity,.agenda-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.project-row:last-child,.alert-row:last-child,.activity:last-child,.agenda-row:last-child{border-bottom:0}.project-badge{width:39px;height:39px;border-radius:9px;display:grid;place-items:center;background:#eaf4f0;color:var(--green);font-size:12px;font-weight:800}.project-row strong,.alert-row strong,.agenda-row strong{font-size:13px}.project-row small,.alert-row small,.agenda-row small,.activity small{display:block;margin-top:3px;color:var(--muted);font-size:11px}.row-end{margin-left:auto;text-align:right}.status{font-size:10px;font-weight:800;padding:5px 8px;border-radius:99px}.active-status{background:#e5f5ef;color:var(--green)}.paused-status{background:#fff4dc;color:#9b6915}.danger-status{background:#fde9e9;color:var(--red)}.progress{height:5px;background:#edf0ee;border-radius:8px;width:115px;margin-top:7px}.progress i{display:block;height:100%;background:var(--green);border-radius:8px}.alert-icon{font-size:18px}.activity time{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;width:39px}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse}.table th{font-size:10px;letter-spacing:.08em;color:var(--muted);text-align:left;padding:0 10px 12px;border-bottom:1px solid var(--line)}.table td{padding:14px 10px;border-bottom:1px solid var(--line);font-size:13px}.table tr:last-child td{border:0}.link{color:var(--green);border:0;background:none;font:inherit;font-weight:700;padding:0;cursor:pointer}.empty{text-align:center;padding:42px;color:var(--muted)}.tabs{display:flex;gap:7px;margin-bottom:18px;overflow:auto}.tab{border:1px solid var(--line);background:#fff;border-radius:99px;padding:8px 12px;white-space:nowrap;font-size:12px;cursor:pointer}.tab.active{color:#fff;background:var(--nav);border-color:var(--nav)}dialog{border:0;border-radius:14px;padding:0;width:min(600px,calc(100% - 30px));box-shadow:0 18px 70px #0b1e21aa}dialog::backdrop{background:#12282b88}.dialog-head{display:flex;justify-content:space-between;align-items:start;padding:23px 25px 16px;border-bottom:1px solid var(--line)}.dialog-head h2{font-size:20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:22px 25px}label{font-size:12px;font-weight:700;color:var(--muted)}input,select,textarea{font:inherit;border:1px solid #dce2df;border-radius:7px;padding:10px;width:100%;display:block;margin-top:6px;color:var(--ink);background:#fff}textarea{min-height:75px;resize:vertical}.wide{grid-column:1/-1}.dialog-actions{display:flex;justify-content:flex-end;gap:9px;padding:0 25px 24px}.mobile-only{display:none}@media(max-width:800px){.sidebar{width:260px;transform:translateX(-100%);transition:.2s}.sidebar.open{transform:none}.mobile-only{display:block}main{margin:0}header{height:84px;padding:12px 16px;gap:8px}h1{font-size:20px}.eyebrow{font-size:9px}.header-actions{margin-left:auto}#app{padding:22px 16px}.stats{grid-template-columns:1fr 1fr;gap:10px}.card{padding:14px}.stat-value{font-size:24px}.dashboard-grid{grid-template-columns:1fr}.view-head{align-items:start;gap:14px}.view-head .button{white-space:nowrap}.table{min-width:620px}}
+.module-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.module-card{display:flex;align-items:center;gap:11px;text-align:left;border:1px solid var(--line);background:#fff;border-radius:12px;padding:13px 14px;cursor:pointer;color:var(--ink);transition:.15s}.module-card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(16,42,51,.08);transform:translateY(-1px)}.module-icon{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;background:var(--soft);color:var(--accent);font-size:17px}.module-card b{display:block;font-size:13px}.module-card small{display:block;color:var(--muted);font-size:11px;margin-top:3px;line-height:1.35}.module-arrow{margin-left:auto;color:var(--muted);font-size:18px}@media(max-width:700px){.module-grid{grid-template-columns:1fr}}
+.tabs .tab.active{color:#fff;background:var(--accent);border-color:var(--accent);box-shadow:0 2px 7px rgba(221,107,61,.25)}.tabs .tab:focus{outline:2px solid rgba(221,107,61,.35);outline-offset:2px}
+.filter-block{margin-bottom:10px}.filter-block>b{display:block;font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin:5px 0 7px}.filter-block .tabs{margin-bottom:4px}.filter-row{display:flex;align-items:end;gap:15px;margin:13px 0 8px}.filter-row label{min-width:180px}.filter-row .change{margin-bottom:10px}@media(max-width:700px){.filter-row{display:block}.filter-row .change{display:block;margin-top:8px}}
+.check-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:6px}.person-check{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fbfcfb;color:var(--ink);font-weight:600}.person-check input{width:auto;margin:0}.person-check small{display:block;color:var(--muted);font-weight:400;font-size:10px;margin-top:2px}
+.project-summary{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:18px}.project-summary-top{display:flex;align-items:center;gap:13px}.project-avatar{width:44px;height:44px;border-radius:10px;background:#17172e;color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}.project-summary-top h3{margin:3px 0;font-size:17px}.project-summary-top small,.project-summary-top span{color:var(--muted);font-size:11px}.economic-progress{margin-top:18px;color:var(--muted);font-size:12px}.economic-progress b{float:right;color:var(--ink)}.economic-progress .progress{width:100%;margin-top:7px}.summary-line{display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line);margin-top:10px;padding-top:10px;font-size:12px}.positive{color:var(--green)}.negative{color:#d34e55}.summary-meta{border-top:1px solid var(--line);margin-top:10px;padding-top:10px;color:var(--muted);font-size:11px}.balance-row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.balance-row.sub{font-size:12px;color:var(--muted)}.balance-row.total{border-bottom:0;background:#faf8f2;margin:0 -21px -21px;padding:17px 21px;font-weight:800}.compact{text-align:center}.compact strong{display:block;font-size:20px;margin-top:7px}.project-tabs{margin-top:4px}
+.today-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin-bottom:24px}.today-strip b,.today-strip strong{display:block}.today-strip b{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.today-strip strong{margin-top:6px;font-size:14px}.mini-chart{height:8px;background:#edf0ee;border-radius:9px;margin-top:18px}.mini-chart i{display:block;height:100%;background:var(--green);border-radius:9px}.weekly-payroll th,.weekly-payroll td{text-align:center;white-space:nowrap}.weekly-payroll th:first-child,.weekly-payroll td:first-child{text-align:left}@media(max-width:700px){.today-strip{grid-template-columns:1fr}.summary-line{display:grid;gap:8px}.check-list{grid-template-columns:1fr}}
+.panel-actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.weeks-indicator{display:inline-block;margin-left:10px;padding:5px 9px;border-radius:99px;background:#e5f5ef;color:var(--green);font-weight:800}
+#projectActionForm[data-kind="subcontract"] [name="paid"]{display:none}
+#projectActionForm[data-kind="subcontract"] label:has([name="paid"]){display:none}
+.weeks-banner{display:flex;align-items:center;gap:12px;margin:12px 0 16px;padding:10px 14px;border-radius:10px;background:#e5f5ef;color:var(--green)}.weeks-banner span{font-size:11px;font-weight:800;letter-spacing:.08em}.weeks-banner strong{font-size:25px}.weeks-banner small{color:var(--muted)}
+.project-summary-top .weeks-banner{margin:0 0 0 auto;min-width:180px;justify-content:center}.summary-meta{display:flex;flex-wrap:wrap;gap:24px;align-items:center}.icon-action{width:32px;height:30px;padding:0!important;font-size:17px!important;display:inline-grid;place-items:center}.subcontract-actions{white-space:nowrap}.abono-button{font-weight:800}.week-controls{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.weekly-payroll{min-width:860px}.weekly-payroll th,.weekly-payroll td{padding:12px 14px;line-height:1.35}.weekly-payroll th b{font-weight:800}.attendance-cell{font-size:18px;text-align:center}.payroll-period{padding:7px 0 12px;letter-spacing:.03em}
+.current-week{font-weight:800;color:var(--ink);padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#f5f8f6;white-space:nowrap}.week-controls{align-items:center;gap:7px;flex-wrap:nowrap}.week-controls button{white-space:nowrap;padding:8px 11px;font-size:12px}.payment-totals,.expense-totals{margin-top:14px;padding:13px 16px;border-top:1px solid var(--line);text-align:right}.category-cell{color:var(--muted);font-size:12px;font-weight:700}
+.payroll-toolbar{display:flex;align-items:center;gap:8px;margin-bottom:8px}.payroll-toolbar button{padding:8px 11px;font-size:12px}.payroll-week-nav{margin:4px 0 10px;justify-content:flex-end}.weekly-payroll .icon-action{width:24px;height:24px;font-size:12px!important}
+.quick-attendance{cursor:pointer;user-select:none}.quick-attendance:hover{background:#e8f3ee}.weekly-payroll .quick-attendance{font-size:16px;font-weight:800}
+.subcontract-card{margin-top:14px}.subcontract-card-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.subcontract-card-head h3{margin:4px 0}.subcontract-card-actions{display:flex;gap:7px;flex-wrap:wrap}.subcontract-ficha{display:flex;flex-wrap:wrap;gap:18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:12px 0}.subcontract-ficha span{font-size:12px;color:var(--muted)}.subcontract-ficha b{display:block;color:var(--ink);margin-top:3px}.subcontract-card h4{margin:14px 0 8px}
+.project-financial-summaries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px}.project-financial-summaries .panel{margin:0}.summary-amounts{display:flex;flex-wrap:wrap;gap:13px}.summary-amounts span{font-size:12px;color:var(--muted)}.summary-amounts b,.summary-amounts strong{display:block;color:var(--ink);font-size:16px;margin-top:3px}.weekly-summary strong{color:var(--orange)}.subcontract-amounts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.subcontract-amounts span{font-size:12px;color:var(--muted)}.subcontract-amounts b,.subcontract-amounts strong{display:block;color:var(--ink);font-size:15px;margin-top:3px}.subcontract-amounts strong{color:var(--orange)}
+@media(max-width:700px){.project-financial-summaries{grid-template-columns:1fr}.subcontract-amounts{grid-template-columns:repeat(2,1fr)}}
+.payroll-toolbar-final{display:flex;align-items:center;gap:8px}.payroll-toolbar-final .print-week-button{margin-left:auto}.weekly-payroll .current-day{background:#f7fbf8!important;box-shadow:none;border-bottom:2px solid #b9d8c8}.weekly-payroll tfoot{border-top:2px solid var(--ink)}.weekly-payroll tfoot th{padding-top:12px;font-size:11px}.salary-cell{font-size:12px;color:var(--muted);white-space:nowrap}
+@media print{.sidebar,header,.view-head .button,.tabs,.button,.nav{display:none!important}main{margin:0}#app{padding:10px}.panel,.project-summary{box-shadow:none;break-inside:avoid}.table{font-size:10px}}
+@media print{ @page{size:landscape;margin:8mm} .weekly-payroll{min-width:0!important;width:100%!important;table-layout:fixed;font-size:9px!important}.weekly-payroll th,.weekly-payroll td{padding:5px 4px!important;white-space:nowrap}.weekly-payroll th:first-child,.weekly-payroll td:first-child{width:30%;white-space:normal}.weekly-payroll th:nth-last-child(3),.weekly-payroll td:nth-last-child(3){width:6%}.weekly-payroll th:nth-last-child(2),.weekly-payroll td:nth-last-child(2){width:10%}.weekly-payroll th:last-child,.weekly-payroll td:last-child{display:none}.payroll-toolbar,.payroll-week-nav,.week-controls{display:none!important}.payroll-period{font-size:14px!important}}
+.detail-grid{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:24px;padding:4px 0 18px}.detail-grid>div{min-width:0}.detail-grid strong{display:block;margin-top:7px;line-height:1.45;font-size:14px;overflow-wrap:anywhere}.panel-title-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.panel-title-row h3{margin:0}.clickable-row{cursor:pointer}.clickable-row:hover{background:#f3f8f6}.current-week{background:#eef8f3;border-left:3px solid var(--green)}.bitacora-photos{display:flex;flex-wrap:wrap;gap:12px}.bitacora-photos img{width:150px;height:110px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}@media(max-width:800px){.detail-grid{grid-template-columns:1fr 1fr;gap:16px}.panel-title-row{align-items:flex-start;flex-direction:column}}
+/* En Despacho se muestra una sola navegación semanal; oculta la etiqueta antigua duplicada. */
+[data-inline-dispatch-payroll] [data-dispatch-week-nav]:not(:has(button)){display:none!important}
+[data-inline-dispatch-payroll] .change{display:none!important}
+
+/* Resúmenes financieros: cada indicador conserva su renglón y su monto. */
+.financial-block{padding:20px!important}.financial-lines{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin-top:12px}.financial-lines span{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.financial-lines b,.financial-lines strong{font-size:14px;color:var(--ink);white-space:nowrap}.financial-lines .positive{color:var(--green)}.financial-lines .negative{color:var(--red)}.financial-bars{display:flex;overflow:hidden;height:6px;border-radius:99px;background:#edf0ee;margin-top:16px}.financial-bars i{display:block;height:100%;min-width:0}.financial-bars i:nth-child(1){background:#e3a531}.financial-bars i:nth-child(2){background:#dd6b3d}.financial-bars i:nth-child(3){background:#1c8b6d}@media(max-width:760px){.financial-lines{grid-template-columns:1fr}.financial-block{padding:16px!important}}
+.project-financial-summaries .financial-block>.eyebrow{font-size:11px}.project-financial-summaries .financial-lines.summary-format{display:flex;flex-direction:column;gap:0;margin-top:12px}.project-financial-summaries .summary-line-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;column-gap:20px;padding:7px 0;border:0;font-size:12px;color:var(--muted)}.project-financial-summaries .summary-line-item span{display:block;padding:0;border:0;color:var(--muted);font-size:12px}.project-financial-summaries .summary-line-item b,.project-financial-summaries .summary-line-item strong{font-size:14px;color:var(--ink);white-space:nowrap}.project-financial-summaries .summary-line-item .positive{color:var(--green)}.project-financial-summaries .summary-line-item .negative{color:var(--red)}.project-financial-summaries .summary-line-item.income-line{padding-top:2px;padding-bottom:16px}.project-financial-summaries .summary-line-item.expense-heading{display:block;padding:0 0 5px}.project-financial-summaries .summary-line-item.expense-heading span{font-size:12px;color:var(--ink)}.project-financial-summaries .summary-line-item.expense-detail{padding-left:32px}.project-financial-summaries .summary-line-item.total-line{padding-top:16px;padding-bottom:18px}.project-financial-summaries .summary-line-item.balance-line{padding-top:3px;font-size:13px}.project-financial-summaries .summary-line-item.balance-line span{font-size:13px}.project-financial-summaries .summary-line-item.balance-line strong{font-size:14px}
+.weekly-summary-grid{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:28px;align-items:start}.weekly-summary-grid strong{display:block;margin-top:8px;font-size:20px}.current-week-card h3{margin-bottom:22px}.weekly-close-row{cursor:pointer}.weekly-close-row:hover{background:#f3f8f6}@media(max-width:800px){.weekly-summary-grid{grid-template-columns:1fr 1fr;gap:18px}}
+.purchase-history-row{cursor:pointer}.purchase-history-row:hover{background:#f3f8f6}.table select{min-width:168px;font-size:12px;padding:7px 8px;margin:0}
+.purchase-request-list{display:grid;gap:8px;margin-top:6px}.purchase-request-row{display:grid;grid-template-columns:1.6fr .7fr 1fr 34px;gap:7px;align-items:center}.purchase-request-row input{margin-top:0}.purchase-request-row .icon{font-size:18px;width:30px;height:30px}
+#dailyCaptureFormV2 label:has([name="purchaseConcept"]),#dailyCaptureFormV2 label:has([name="purchaseAmount"]){display:none!important}
+#dailyDeliveryQueue:empty{display:none}
+.budget-row{cursor:pointer}.budget-row:hover{background:#f3f8f6}.budget-row small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.budget-tabs{margin-top:2px;margin-bottom:22px}.budget-tabs .tab{font-size:12px}
+.client-row{cursor:pointer}.client-row:hover{background:#f3f8f6}.client-row small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.client-contact{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:7px;background:#edf5f1;color:var(--green);text-decoration:none;font-weight:800;margin-right:4px}.client-contact:hover{background:#dceee6}.client-actions{display:flex;gap:7px;align-items:center;padding-top:4px}.client-notes{border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:13px}.client-inline-button{font-size:11px;padding:7px 10px}.client-detail-grid{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:20px}.client-detail-grid strong{display:block;margin-top:5px}@media(max-width:800px){.client-detail-grid{grid-template-columns:1fr 1fr}}
+/* Separadores discretos para familias del catálogo de materiales. */
+.family-group th{background:#f1f7f5;color:#167c70;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;text-align:left;padding:.65rem .75rem;border-top:1px solid #dceae6}
+
+/* Respeta la zona segura superior e inferior en iPhone y otros móviles con notch. */
+@media(max-width:800px){
+  body{min-height:100dvh}
+  .sidebar{padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+  header{height:auto;min-height:calc(84px + env(safe-area-inset-top,0px));padding-top:calc(12px + env(safe-area-inset-top,0px));padding-right:calc(16px + env(safe-area-inset-right,0px));padding-left:calc(16px + env(safe-area-inset-left,0px))}
+  #menuButton{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;font-size:24px;touch-action:manipulation}
+  header>div:nth-of-type(1){min-width:0}
+  header h1{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #app{padding-right:calc(16px + env(safe-area-inset-right,0px));padding-bottom:calc(22px + env(safe-area-inset-bottom,0px));padding-left:calc(16px + env(safe-area-inset-left,0px))}
+}
+
+/* ===== PP CORE V2 · ajustes de distribución (equivalen a layout-cleanup de la V1) ===== */
+.sidebar{overflow-y:auto;overflow-x:hidden;padding:18px 14px}
+.brand{margin-bottom:18px}
+.nav{padding:9px 11px;margin:1px 0;font-size:13px}
+.nav-separator{height:10px!important;margin:6px 10px!important}
+.side-foot{position:sticky;bottom:0;flex-shrink:0;background:var(--nav);z-index:1;padding:10px 6px 4px}
+.side-foot>div:first-child{white-space:nowrap;line-height:1;font-size:8px;letter-spacing:0;color:#8da09d}
+.side-foot>div:nth-child(2){display:flex;align-items:center;gap:2px;color:#a9bbb8;font-size:10px;line-height:1.35}
+.side-foot .online-dot{flex:0 0 auto}
+.header-saved-status{display:none!important}
+
+/* ===== Panel de Configuración ===== */
+#settingsDialog{width:min(560px,calc(100% - 30px))}
+.settings-card{margin:0;background:#fff}
+.settings-section{padding:18px 25px;border-bottom:1px solid var(--line)}
+.settings-section h3{font-size:15px;margin-bottom:7px}
+.settings-section label{display:block;margin:11px 0}
+.settings-section [data-save-greeting],.settings-section [data-save-edit],.settings-section [data-save-pass]{margin-top:5px}
+.settings-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.settings-note{display:block;color:var(--muted);font-size:11px;margin-top:11px}
+.settings-message{min-height:17px;font-size:12px;color:var(--green);margin-top:9px}
+.settings-grid{padding:0;gap:10px}
+.button.danger{background:#fde9e9;color:var(--red)}
+.button[disabled]{opacity:.5;cursor:not-allowed}
+.sensitive-hidden{display:none!important}
+
+/* ===== Costos: familias, FASAR ===== */
+.family-group th{background:#eef4f2;text-align:left;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink,#17303a)}
+.material-single-dialog{width:min(640px,calc(100vw - 30px));padding:0;border:0;border-radius:14px;overflow:hidden}
+.material-single-dialog form{margin:0}
+.fasar-single{grid-column:1/-1;padding:14px;border:1px solid var(--line,#dbe5e1);border-radius:10px;background:#f5f8f7}
+.fasar-single[hidden]{display:none}
+.fasar-single h3{margin:0 0 10px;font-size:14px}
+.fasar-single-result{margin:12px 0 0;font-size:13px}
+.row-baja{opacity:.55}
+.icon-action{min-width:34px;padding:6px 9px}
+
+</style><style>.mark{overflow:hidden;background:#fff}.mark img{width:100%;height:100%;object-fit:contain}.auth-gate{position:fixed;z-index:50;inset:0;display:grid;place-items:center;padding:20px;background:#13252bef}.auth-gate[hidden]{display:none}.auth-card{width:min(420px,100%);background:#fff;border-radius:15px;padding:34px}.auth-card .brand{margin:0 0 28px}.auth-card h1{font-size:25px;margin-bottom:9px}.auth-card>p{color:#69767a;line-height:1.5;margin-bottom:22px}.auth-card form{display:grid;gap:15px}.auth-card form .button{margin-top:5px}.auth-card .link{margin-top:18px}.auth-message{font-size:12px!important;margin:13px 0 0!important;color:#d75555!important}.auth-message.ok{color:#1c8b6d!important}</style>
   <title>PP CORE</title></head>
 <body>
   <section id="authGate" class="auth-gate" hidden><div class="auth-card"><div class="brand"><span class="mark"><img src="logo-pp.png?v=3" alt="PP Arquitectura"></span><span><b>PP CORE</b><small>Acceso seguro</small></span></div><h1>Tu espacio de trabajo</h1><p>Inicia sesión para sincronizar PP CORE entre tus dispositivos.</p><form id="authForm"><label>Correo electrónico<input name="email" type="email" required autocomplete="email" placeholder="tu@correo.com"></label><label>Contraseña<input name="password" type="password" required minlength="8" autocomplete="current-password" placeholder="Mínimo 8 caracteres"></label><button class="button primary" type="submit">Entrar</button></form><div class="auth-links"><button id="forgotPasswordButton" type="button" class="link">Olvidé mi contraseña</button><button id="signUpButton" type="button" class="link">Crear mi cuenta</button></div><p id="authMessage" class="auth-message"></p></div></section>
@@ -50,6 +139,1173 @@
   <dialog id="personDialog"><form method="dialog" id="personForm"><div class="dialog-head"><div><p class="eyebrow">MOTOR DE PERSONAS</p><h2>Expediente de Persona</h2></div><button class="icon" type="button" value="cancel">×</button></div><div class="form-grid"><label>Nombre(s)<input name="names" required></label><label>Apellido paterno<input name="lastName" required></label><label>Apellido materno<input name="secondLastName"></label><label>Fecha de alta<input name="startDate" type="date" required></label><label class="wide">Roles (separados por coma)<input name="roles" required placeholder="Ej. Maestro, Supervisor"></label><label>Categoría laboral<select name="category"><option>Empleado</option><option>Honorarios</option><option>Destajista</option><option>Subcontratista</option><option>Temporal</option><option>Practicante</option><option>Proveedor de Servicios</option></select></label><label>Disponibilidad<select name="availability"><option>Disponible</option><option>Asignado</option><option>Vacaciones</option><option>Permiso</option><option>Incapacidad</option><option>Baja</option></select></label><label>CURP<input name="curp"></label><label>RFC<input name="rfc"></label><label>NSS<input name="nss"></label><label>Fecha de nacimiento<input name="birthDate" type="date"></label><label>Sexo<input name="sex"></label><label>Estado civil<input name="maritalStatus"></label><label>Correo principal<input name="email" type="email"></label><label>Correo secundario<input name="secondaryEmail" type="email"></label><label>Teléfono principal<input name="phone" type="tel"></label><label>Teléfono secundario<input name="secondaryPhone" type="tel"></label><label>WhatsApp<input name="whatsapp" type="tel"></label><label class="wide">Dirección<input name="address"></label><label>Código postal<input name="postalCode"></label><label>Municipio<input name="municipality"></label><label>Estado<input name="state"></label><label>País<input name="country" value="México"></label><label>Contacto de emergencia<input name="emergencyContact"></label><label>Teléfono de emergencia<input name="emergencyPhone" type="tel"></label><label>Banco<input name="bank"></label><label>Cuenta / CLABE<input name="bankAccount"></label><label class="wide">Observaciones<textarea name="notes"></textarea></label></div><div class="dialog-actions"><button type="button" value="cancel" class="button secondary">Cancelar</button><button class="button primary" value="default">Guardar persona</button></div></form></dialog>
   <dialog id="attendanceDialog"><form method="dialog" id="attendanceForm"><div class="dialog-head"><div><p class="eyebrow">ASISTENCIA</p><h2>Registrar asistencia</h2></div><button class="icon" value="cancel">×</button></div><div class="form-grid"><label class="wide">Persona<select name="person" required></select></label><label class="wide">Obra<select name="project" required></select></label><label>Fecha<input name="date" type="date" required></label><label>Estado<select name="status"><option>Presente</option><option>Retardo</option><option>Falta</option></select></label><label class="wide">Notas<textarea name="notes" placeholder="Horario, incidencias u observaciones."></textarea></label></div><div class="dialog-actions"><button value="cancel" class="button secondary">Cancelar</button><button class="button primary" value="default">Guardar asistencia</button></div></form></dialog>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.105.0"></script>
-<script src="cloud-config.js"></script>
-<script src="pp-v2.js"></script>
+<script>
+/* ===== cloud-config.js ===== */
+// PP CORE V2 · conexión al proyecto "PP CORE V2" de Supabase.
+// Solo contiene claves PÚBLICAS (la protección real está en las reglas de la base de datos).
+window.PP_CORE_SUPABASE_URL = 'https://imhtwjbmmntsghkpxvsa.supabase.co';
+window.PP_CORE_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltaHR3amJtbW50c2doa3B4dnNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA5OTE2MTcsImV4cCI6MjEwNjU2NzYxN30.J15UV4E_gVi55PeDUJxGy_VDU95xvdwrEeqTGzI7n-w';
+
+</script>
+<script>
+/* ===== pp-v2.js ===== */
+/* PP CORE V2 · núcleo: acceso, menú, configuración, conexión e indicador de sincronización.
+   Los módulos se registran en window.PPV2.vistas (ver clientes-v2.js). */
+(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  var db = window.supabase.createClient(window.PP_CORE_SUPABASE_URL, window.PP_CORE_SUPABASE_KEY,
+    { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
+  var est = { miembro: null, despacho: null, sesion: null, ultimaSync: null, vista: 'home' };
+  function esc(t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  var PPV2 = window.PPV2 = { db: db, est: est, esc: esc, vistas: {}, go: null, sincronizado: null,
+    esAdmin: function () { return !!est.miembro && (est.miembro.rol === 'director' || est.miembro.rol === 'administrativo'); } };
+  window.ppDb = db;
+
+  var AREAS = { home: 'CENTRO DE OPERACIONES', agenda: 'AGENDA',
+    projects: 'ÁREA DE CONTROL', logs: 'ÁREA DE CONTROL', purchases: 'ÁREA DE CONTROL', inventory: 'ÁREA DE CONTROL',
+    budgets: 'ÁREA DE COSTOS', apu: 'ÁREA DE COSTOS', materials: 'ÁREA DE COSTOS', suppliers: 'ÁREA DE COSTOS',
+    dispatch: 'ÁREA ADMINISTRATIVA', people: 'ÁREA ADMINISTRATIVA', clients: 'ÁREA ADMINISTRATIVA',
+    payroll: 'ÁREA ADMINISTRATIVA', finance: 'ÁREA ADMINISTRATIVA' };
+
+  /* ---------- Indicador de sincronización (pastilla arriba + pie lateral) ---------- */
+  var pill, pPrim, pSec;
+  function pastilla() {
+    if (pill) return pill;
+    var acc = $('.header-actions'); if (!acc) return null;
+    pill = document.createElement('button'); pill.type = 'button'; pill.id = 'cloudAccountStatus';
+    pill.className = 'cloud-account-status';
+    pill.innerHTML = '<span data-cloud-icon>○</span><span><b data-cloud-primary>Comprobando nube</b><small data-cloud-secondary></small></span>';
+    acc.insertBefore(pill, acc.querySelector('.avatar'));
+    pPrim = pill.querySelector('[data-cloud-primary]'); pSec = pill.querySelector('[data-cloud-secondary]');
+    pill.addEventListener('click', abrirConfiguracion);
+    var st = document.createElement('style');
+    st.textContent = '.cloud-account-status{display:flex;align-items:center;gap:8px;max-width:245px;padding:7px 10px;border:1px solid #dfe7e4;border-radius:12px;background:#f4f8f6;color:#17343b;text-align:left;cursor:pointer}.cloud-account-status>span:first-child{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#dff1ea;color:#08795f;font-weight:900}.cloud-account-status b,.cloud-account-status small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cloud-account-status b{font-size:11px}.cloud-account-status small{font-size:10px;color:#68777a;margin-top:1px}.cloud-account-status.is-error>span:first-child{background:#fde8e8;color:#bd3131}.cloud-account-status.is-saving>span:first-child{background:#fff0d7;color:#a66700}@media(max-width:760px){.cloud-account-status{max-width:142px}.cloud-account-status small{display:none}}';
+    document.head.appendChild(st);
+    return pill;
+  }
+  function hora(d) { return d.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' }); }
+  function estado(tipo, titulo, detalle) {
+    if (!pastilla()) return;
+    pill.classList.toggle('is-error', tipo === 'error');
+    pill.classList.toggle('is-saving', tipo === 'saving');
+    pill.querySelector('[data-cloud-icon]').textContent = tipo === 'saved' ? '✓' : tipo === 'saving' ? '↻' : tipo === 'error' ? '!' : '○';
+    pPrim.textContent = titulo; pSec.textContent = detalle || '';
+    var pie = $('.side-foot div:last-child');
+    if (pie) pie.innerHTML = '<span class="online-dot"></span> ' +
+      (tipo === 'saved' ? 'En línea · Sincronizado' : tipo === 'saving' ? 'En línea · Sincronizando' :
+       tipo === 'error' ? 'Sin conexión · Reintentando' : 'Comprobando conexión');
+  }
+  function sincronizado() {
+    est.ultimaSync = new Date();
+    estado('saved', 'Sincronizado', 'Última sincronización: ' + hora(est.ultimaSync));
+  }
+  PPV2.sincronizado = sincronizado;
+  function sinConexion() {
+    estado('error', 'Sin conexión', est.ultimaSync ? 'Última sincronización: ' + hora(est.ultimaSync) : 'Reintentando…');
+  }
+  async function comprobar() {
+    if (!navigator.onLine) { sinConexion(); return false; }
+    estado('saving', 'Sincronizando', '');
+    var r = await db.from('miembros').select('id', { count: 'exact', head: true });
+    if (r.error) { sinConexion(); return false; }
+    sincronizado(); return true;
+  }
+  window.addEventListener('online', function () { if (est.miembro) comprobar().then(function () { render(est.vista); }); });
+  window.addEventListener('offline', sinConexion);
+  setInterval(function () { if (est.miembro) comprobar(); }, 60000);
+
+  /* ---------- Acceso ---------- */
+  var gate = $('#authGate'), form = $('#authForm'), msg = $('#authMessage');
+  function aviso(t, ok) { msg.textContent = t || ''; msg.classList.toggle('ok', !!ok); }
+  var btnRegistro = $('#signUpButton'); if (btnRegistro) btnRegistro.style.display = 'none'; // registro cerrado
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault(); aviso('Entrando…', true);
+    var d = new FormData(form);
+    var r = await db.auth.signInWithPassword({ email: String(d.get('email')).trim(), password: String(d.get('password')) });
+    if (r.error) aviso(/invalid/i.test(r.error.message) ? 'Correo o contraseña incorrectos.' : 'No se pudo entrar: ' + r.error.message);
+  });
+  $('#forgotPasswordButton').addEventListener('click', async function () {
+    var email = String(new FormData(form).get('email') || '').trim();
+    if (!email) return aviso('Escribe tu correo arriba y vuelve a pulsar «Olvidé mi contraseña».');
+    var r = await db.auth.resetPasswordForEmail(email, { redirectTo: location.origin + location.pathname });
+    aviso(r.error ? 'No se pudo enviar el correo: ' + r.error.message : 'Te enviamos un correo para crear una contraseña nueva.', !r.error);
+  });
+  db.auth.onAuthStateChange(function (evento, sesion) {
+    if (evento === 'PASSWORD_RECOVERY') {
+      var p = prompt('Escribe tu nueva contraseña (mínimo 8 caracteres):');
+      if (p && p.length >= 8) db.auth.updateUser({ password: p }).then(function (r) { alert(r.error ? 'No se pudo cambiar: ' + r.error.message : 'Contraseña cambiada.'); });
+    }
+    est.sesion = sesion;
+    if (sesion) entrar(); else salir();
+  });
+  function salir() { est.miembro = null; est.despacho = null; gate.hidden = false; form.reset(); aviso(''); }
+  var entrando = false;
+  async function entrar() {
+    if (entrando || est.miembro) return; entrando = true;
+    var yo = est.sesion && est.sesion.user && est.sesion.user.id;
+    var r = yo ? await db.from('miembros').select('nombre,rol,organizacion_id,organizaciones(nombre)').eq('usuario_id', yo).limit(1) : { error: { message: 'sin usuario' } };
+    entrando = false;
+    if (r.error || !r.data || !r.data.length) {
+      aviso('Esta cuenta no pertenece a ningún despacho. Pide acceso al director.');
+      await db.auth.signOut(); return;
+    }
+    est.miembro = r.data[0]; est.despacho = r.data[0].organizaciones && r.data[0].organizaciones.nombre;
+    gate.hidden = true;
+    var av = $('.avatar'); if (av) av.title = 'Configuración';
+    sincronizado(); go('home');
+  }
+
+  /* ---------- Menú y vistas ---------- */
+  function saludoPersonal() { var u = est.sesion && est.sesion.user; return u && u.user_metadata && u.user_metadata.saludo; }
+  function saludo() {
+    if (saludoPersonal()) return saludoPersonal();
+    var h = new Date().getHours(), p = (est.miembro.nombre || '').trim().split(/\s+/);
+    var nombre = p.length === 2 ? p[1] : p[0];
+    return (h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches') + ', ' + nombre;
+  }
+  async function cuenta(tabla, filtro) {
+    var q = db.from(tabla).select('id', { count: 'exact', head: true });
+    if (filtro) q = q.eq(filtro[0], filtro[1]);
+    var r = await q; return r.error ? '—' : r.count;
+  }
+  PPV2.cuenta = cuenta;
+  async function render(vista) {
+    var app = $('#app'); if (!est.miembro) return;
+    var mod = PPV2.vistas[vista];
+    if (mod && mod.render) { await mod.render(app); return; }
+    if (vista === 'home') {
+      app.innerHTML = '<div class="stats"><div class="card"><div class="stat-label">PROYECTOS ACTIVOS</div><div class="stat-value" id="k1">…</div><span class="change">Obras y servicios</span></div>' +
+        '<div class="card"><div class="stat-label">SOLICITUDES POR AUTORIZAR</div><div class="stat-value" id="k2">…</div><span class="change">Material pendiente</span></div>' +
+        '<div class="card"><div class="stat-label">PRESUPUESTOS EN REVISIÓN</div><div class="stat-value" id="k3">…</div><span class="change">Sin autorizar</span></div>' +
+        '<div class="card"><div class="stat-label">HOJAS DEL DÍA ABIERTAS</div><div class="stat-value" id="k4">…</div><span class="change">Sin cerrar</span></div></div>' +
+        '<section class="panel"><h2>Conexión con PP CORE V2</h2><p style="margin:10px 0 0;line-height:1.6">Despacho: <b>' + esc(est.despacho) + '</b> · Rol: <b>' + esc(est.miembro.rol) + '</b><br>' +
+        'La nueva versión está conectada a tu base de datos. Los módulos se irán activando por etapas.</p></section>';
+      var v = await Promise.all([cuenta('proyectos', ['estado', 'activo']), cuenta('solicitudes_compra', ['estado', 'por_autorizar']),
+        cuenta('presupuestos', ['estado', 'en_revision']), (async function () {
+          var r = await db.from('bitacoras').select('id', { count: 'exact', head: true }).is('cerrada_en', null); return r.error ? '—' : r.count; })()]);
+      ['k1', 'k2', 'k3', 'k4'].forEach(function (id, i) { var el = $('#' + id); if (el) el.textContent = v[i]; });
+      sincronizado();
+    } else {
+      var t = $('.nav[data-view="' + vista + '"] span');
+      app.innerHTML = '<section class="panel"><div class="empty"><h2>' + esc(t ? t.textContent : vista) + '</h2><p>Este módulo se está reconstruyendo sobre la base nueva.<br>Conserva el mismo aspecto y flujo; se activará en su etapa.</p></div></section>';
+    }
+  }
+  function go(vista) {
+    if (!est.miembro) return;
+    est.vista = vista;
+    document.querySelectorAll('#navigation .nav').forEach(function (b) { b.classList.toggle('active', b.dataset.view === vista); });
+    var mod = PPV2.vistas[vista], t = $('.nav[data-view="' + vista + '"] span');
+    if (mod && mod.alEntrar) mod.alEntrar();
+    $('#crumb').textContent = (mod && mod.crumb) || AREAS[vista] || 'PP CORE';
+    $('#pageTitle').textContent = vista === 'home' ? saludo() : ((mod && mod.titulo) || (t ? t.textContent : ''));
+    $('#sidebar').classList.remove('open');
+    render(vista);
+  }
+  PPV2.go = go; PPV2.render = function () { return render(est.vista); };
+  window.navigate = go;
+  $('#navigation').addEventListener('click', function (e) { var b = e.target.closest('.nav'); if (b) go(b.dataset.view); });
+  $('#menuButton').onclick = function () { $('#sidebar').classList.toggle('open'); };
+
+  /* ---------- Configuración (con el respaldo adentro, como en la V1) ---------- */
+  var dlg;
+  function descargar(nombre, texto) {
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([texto], { type: 'application/json' }));
+    a.download = nombre; document.body.appendChild(a); a.click(); a.remove();
+  }
+  var TABLAS_RESPALDO = ['clientes', 'personas', 'personas_historial', 'cuentas', 'proveedores', 'familias_material', 'materiales', 'materiales_compuestos', 'compuesto_componentes',
+    'apus', 'apu_componentes', 'tablas_rendimiento', 'presupuestos', 'partidas_presupuesto', 'programa_actividades', 'programa_dependencias', 'proyectos', 'equipo_proyecto',
+    'bitacoras', 'bitacora_fotos', 'asistencias', 'agenda_eventos', 'documentos', 'solicitudes_compra', 'periodos_nomina', 'lineas_nomina', 'subcontratos',
+    'pagos_subcontrato', 'movimientos', 'fondos_distribucion', 'utilidades_obra', 'distribucion_utilidad', 'retiros_capital', 'prestamos', 'descuentos_prestamo', 'firmas'];
+  async function respaldo() {
+    var salida = { app: 'PP CORE V2', fecha: new Date().toISOString(), despacho: est.despacho, tablas: {}, omitidas: [] };
+    for (var i = 0; i < TABLAS_RESPALDO.length; i++) {
+      var t = TABLAS_RESPALDO[i], filas = [], desde = 0, fallo = null;
+      for (;;) {
+        var r = await db.from(t).select('*').range(desde, desde + 999);
+        if (r.error) { fallo = r.error.message; break; }
+        filas = filas.concat(r.data); if (r.data.length < 1000) break; desde += 1000;
+      }
+      if (fallo) salida.omitidas.push(t + ': ' + fallo); else salida.tablas[t] = filas;
+    }
+    descargar('pp-core-respaldo-' + new Date().toISOString().slice(0, 10) + '.json', JSON.stringify(salida, null, 2));
+    return salida;
+  }
+  PPV2.respaldo = respaldo;
+  function mensaje(sec, texto, ok) {
+    var el = dlg.querySelector('[data-msg="' + sec + '"]'); el.textContent = texto; el.style.color = ok ? 'var(--green)' : 'var(--red)';
+  }
+  function construirConfiguracion() {
+    dlg = document.createElement('dialog'); dlg.id = 'settingsDialog';
+    dlg.innerHTML = '<form method="dialog" class="settings-card"><div class="dialog-head"><div><p class="eyebrow">PP CORE</p><h2>Configuración</h2></div><button class="icon" value="cancel" aria-label="Cerrar">×</button></div>' +
+      '<section class="settings-section"><h3>Cuenta y sincronización</h3><p class="subtitle" data-account-status>Revisando el estado de la cuenta...</p>' +
+      '<div class="form-grid settings-grid"><label>Nueva contraseña de entrada<input name="pass1" type="password" autocomplete="new-password"></label><label>Confirmar contraseña<input name="pass2" type="password" autocomplete="new-password"></label></div>' +
+      '<div class="settings-actions"><button type="button" class="button secondary" data-save-pass>Cambiar contraseña</button><button type="button" class="button secondary" data-sign-out>Cerrar sesión</button></div>' +
+      '<p class="settings-message" data-msg="cuenta"></p><small class="settings-note">La cuenta en línea permite consultar la misma información en tus dispositivos.</small></section>' +
+      '<section class="settings-section"><h3>Perfil de trabajo</h3><label>Saludo de inicio<input name="greeting" maxlength="60" placeholder="Buenos días, Fernando"></label><button type="button" class="button secondary" data-save-greeting>Guardar saludo</button><p class="settings-message" data-msg="saludo"></p></section>' +
+      '<section class="settings-section" data-edit-section><h3>Contraseña de edición</h3><p class="subtitle">Protege cambios en bitácoras, semanas de nómina y presupuestos cerrados. Solo el director la tiene.</p>' +
+      '<div class="form-grid settings-grid"><label>Contraseña actual<input name="oldEdit" type="password" autocomplete="off"></label><label>Nueva contraseña (mínimo 8)<input name="newEdit" type="password" autocomplete="new-password"></label><label>Confirmar contraseña<input name="confirmEdit" type="password" autocomplete="new-password"></label></div>' +
+      '<button type="button" class="button secondary" data-save-edit>Cambiar contraseña de edición</button><p class="settings-message" data-msg="edicion"></p></section>' +
+      '<section class="settings-section"><h3>Respaldo de información</h3><p class="subtitle">Descarga una copia completa de los datos de tu despacho guardados en la nube.</p>' +
+      '<div class="settings-actions"><button type="button" class="button secondary" data-settings-backup>⇩ Descargar respaldo</button><button type="button" class="button secondary" data-settings-restore disabled>⇧ Restaurar respaldo</button></div>' +
+      '<p class="settings-message" data-msg="respaldo"></p><small class="settings-note">Restaurar se activa en una etapa posterior. Los datos personales cifrados (CURP, RFC, NSS, cuentas) no se incluyen en el respaldo.</small></section>' +
+      '<section class="settings-section"><h3>Datos del sistema</h3><p class="subtitle" data-settings-count>Información guardada en la nube.</p></section>' +
+      '<div class="dialog-actions"><button class="button primary" value="cancel">Cerrar</button></div></form>';
+    document.body.appendChild(dlg);
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.querySelector('[data-sign-out]').addEventListener('click', async function () { dlg.close(); await db.auth.signOut(); });
+    dlg.querySelector('[data-save-pass]').addEventListener('click', async function () {
+      var f = dlg.querySelector('form'), a = f.elements.pass1.value, b = f.elements.pass2.value;
+      if (a.length < 8 || a !== b) return mensaje('cuenta', 'La nueva contraseña debe tener al menos 8 caracteres y coincidir.', false);
+      var r = await db.auth.updateUser({ password: a });
+      if (r.error) return mensaje('cuenta', 'No se pudo cambiar: ' + r.error.message, false);
+      f.elements.pass1.value = ''; f.elements.pass2.value = ''; mensaje('cuenta', 'Contraseña de entrada actualizada.', true);
+    });
+    dlg.querySelector('[data-save-greeting]').addEventListener('click', async function () {
+      var valor = dlg.querySelector('[name="greeting"]').value.trim();
+      var r = await db.auth.updateUser({ data: { saludo: valor } });
+      if (r.error) return mensaje('saludo', 'No se pudo guardar: ' + r.error.message, false);
+      if (est.sesion && est.sesion.user) est.sesion.user.user_metadata = Object.assign({}, est.sesion.user.user_metadata, { saludo: valor });
+      mensaje('saludo', 'Saludo guardado.', true);
+      if (est.vista === 'home') $('#pageTitle').textContent = saludo();
+    });
+    dlg.querySelector('[data-save-edit]').addEventListener('click', async function () {
+      var f = dlg.querySelector('form'), v = f.elements;
+      if (v.newEdit.value.length < 8 || v.newEdit.value !== v.confirmEdit.value) return mensaje('edicion', 'La nueva contraseña debe tener al menos 8 caracteres y coincidir.', false);
+      var r = await db.rpc('establecer_contrasena_edicion', { p_nueva: v.newEdit.value, p_actual: v.oldEdit.value || null });
+      if (r.error) return mensaje('edicion', r.error.message, false);
+      v.oldEdit.value = ''; v.newEdit.value = ''; v.confirmEdit.value = ''; mensaje('edicion', 'Contraseña de edición actualizada.', true);
+    });
+    dlg.querySelector('[data-settings-backup]').addEventListener('click', async function () {
+      mensaje('respaldo', 'Preparando respaldo…', true);
+      var s = await respaldo();
+      mensaje('respaldo', 'Respaldo descargado' + (s.omitidas.length ? ' (' + s.omitidas.length + ' tabla(s) sin permiso omitidas).' : '.'), true);
+    });
+  }
+  async function abrirConfiguracion() {
+    if (!est.miembro) return;
+    if (!dlg) construirConfiguracion();
+    var u = est.sesion && est.sesion.user;
+    dlg.querySelector('[data-account-status]').textContent = 'Conectado como ' + (u ? u.email : '') + ' · ' + est.despacho + ' · ' + est.miembro.rol +
+      (est.ultimaSync ? ' · Última sincronización: ' + hora(est.ultimaSync) : '');
+    dlg.querySelector('[name="greeting"]').value = saludoPersonal() || '';
+    dlg.querySelector('[data-edit-section]').hidden = est.miembro.rol !== 'director';
+    dlg.showModal();
+    var n = await Promise.all(['proyectos', 'presupuestos', 'bitacoras', 'movimientos', 'clientes', 'personas'].map(function (t) { return cuenta(t); }));
+    var total = n.reduce(function (a, x) { return a + (typeof x === 'number' ? x : 0); }, 0);
+    dlg.querySelector('[data-settings-count]').textContent = total + ' registros principales guardados en la nube. Última revisión: ' + new Date().toLocaleDateString('es-MX');
+  }
+  var av = $('.avatar'); if (av) { av.id = 'settingsButton'; av.setAttribute('aria-label', 'Configuración'); av.addEventListener('click', abrirConfiguracion); }
+  var ex = $('#exportButton'); if (ex) ex.hidden = true;
+
+  /* ---------- Inicio ---------- */
+  gate.hidden = false;
+  estado('idle', 'Comprobando nube', '');
+  db.auth.getSession().then(function (r) { if (!r.data.session) { gate.hidden = false; estado('error', 'Sin sesión', 'Inicia sesión'); } });
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(function () {});
+})();
+
+</script>
+<script>
+/* ===== clientes-v2.js ===== */
+/* PP CORE V2 · módulo Clientes (misma pantalla y ficha que la V1, sobre la base nueva).
+   RFC, CURP, INE, IMSS y cuenta bancaria se guardan cifrados y solo los ven director y administrativo. */
+(function () {
+  'use strict';
+  var P = window.PPV2, db = P.db, esc = P.esc;
+  var $ = function (s) { return document.querySelector(s); };
+
+  // campo del formulario (nombre de la V1) -> columna de la base
+  var COL = { name: 'nombre', personType: 'tipo_persona', contactName: 'contacto', phone: 'telefono', secondaryPhone: 'telefono_alterno',
+    whatsapp: 'whatsapp', email: 'correo', secondaryEmail: 'correo_alterno', address: 'direccion', postalCode: 'codigo_postal',
+    municipality: 'municipio', state: 'estado_region', country: 'pais', sex: 'sexo', occupation: 'ocupacion', education: 'estudios',
+    maritalStatus: 'estado_civil', children: 'hijos', facebook: 'facebook', instagram: 'instagram', notes: 'notas', status: 'estado' };
+  var SENS = ['rfc', 'curp', 'ine', 'imss', 'bank', 'bankAccount'];
+  var TIPO = { fisica: 'Persona física', moral: 'Persona moral' }, ESTADO = { activo: 'Activo', historico: 'Histórico', bloqueado: 'Bloqueado' };
+  var HIJOS = { si: 'Sí', no: 'No' };
+  function inv(m) { var o = {}; Object.keys(m).forEach(function (k) { o[m[k]] = k; }); return o; }
+  var DE_TIPO = inv(TIPO), DE_ESTADO = inv(ESTADO), DE_HIJOS = inv(HIJOS);
+
+  function enlaces(c) {
+    var o = [];
+    if (c.telefono) o.push('<a class="client-contact" href="tel:' + esc(c.telefono) + '" title="Llamar">☎</a>');
+    if (c.whatsapp) o.push('<a class="client-contact" href="https://wa.me/' + String(c.whatsapp).replace(/[^0-9]/g, '') + '" target="_blank" rel="noopener" title="WhatsApp">◉</a>');
+    if (c.correo) o.push('<a class="client-contact" href="mailto:' + esc(c.correo) + '" title="Correo">✉</a>');
+    return o.join(' ');
+  }
+  function etiqueta(s) { return '<span class="status ' + (s === 'Activo' ? 'active-status' : s === 'Pausado' ? 'paused-status' : 'danger-status') + '">' + s.toUpperCase() + '</span>'; }
+
+  var lista = [];
+  async function cargar() {
+    var r = await Promise.all([db.from('clientes').select('*').order('nombre'), db.from('proyectos').select('cliente_id,estado')]);
+    if (r[0].error) throw r[0].error;
+    lista = r[0].data || [];
+    var proy = (r[1].data || []);
+    lista.forEach(function (c) {
+      var ps = proy.filter(function (p) { return p.cliente_id === c.id; });
+      c._proyectos = ps.length; c._activos = ps.filter(function (p) { return p.estado === 'activo'; }).length;
+    });
+  }
+  function tabla(items, vacio) {
+    return '<div class="table-wrap"><table class="table"><thead><tr><th>CLIENTE</th><th>CONTACTO</th><th>PROYECTOS</th><th>ACTIVOS</th><th>ESTADO</th></tr></thead><tbody>' +
+      (items.map(function (c) {
+        var estado = c._activos > 0 ? 'Activo' : (c.estado === 'bloqueado' ? 'Bloqueado' : 'Histórico');
+        return '<tr class="client-row" data-client-id="' + esc(c.id) + '"><td><b>' + esc(c.nombre) + '</b><small>' + esc(TIPO[c.tipo_persona] || 'Cliente') + '</small></td><td>' +
+          enlaces(c) + '</td><td>' + c._proyectos + '</td><td>' + c._activos + '</td><td>' + etiqueta(estado) + '</td></tr>';
+      }).join('') || '<tr><td colspan="5" class="empty">' + vacio + '</td></tr>') + '</tbody></table></div>';
+  }
+  async function pintar(app) {
+    try { await cargar(); } catch (e) { app.innerHTML = '<section class="panel"><div class="empty">No se pudieron cargar los clientes: ' + esc(e.message) + '</div></section>'; return; }
+    var actuales = lista.filter(function (c) { return c._activos > 0; }), historicos = lista.filter(function (c) { return c._activos === 0; });
+    app.innerHTML = '<div class="view-head"><div><p class="eyebrow">MOTOR DE CLIENTES</p><h2>Clientes</h2><p class="subtitle">Ficha de contacto, proyectos y actividades del despacho.</p></div>' +
+      (P.esAdmin() ? '<button class="button primary" id="nuevoCliente">+ Nuevo cliente</button>' : '') + '</div>' +
+      '<section class="panel"><h3>Clientes actuales</h3>' + tabla(actuales, 'No hay clientes con proyectos activos.') + '</section>' +
+      '<section class="panel"><h3>Clientes históricos</h3><p class="subtitle">Clientes sin proyectos activos actualmente.</p>' + tabla(historicos, 'Aún no hay clientes históricos.') + '</section>';
+    var nuevo = $('#nuevoCliente'); if (nuevo) nuevo.onclick = function () { editor(null); };
+    document.querySelectorAll('#app .client-row').forEach(function (fila) {
+      fila.onclick = function (e) { if (e.target.closest('a')) return; editor(fila.dataset.clientId); };
+    });
+    P.sincronizado();
+  }
+
+  /* ---------- Ficha del cliente (formulario) ---------- */
+  var dlg;
+  function formulario() {
+    if (dlg) return dlg;
+    dlg = document.createElement('dialog'); dlg.id = 'clientEditorDialog';
+    dlg.innerHTML = '<form method="dialog" id="clientEditorForm"><div class="dialog-head"><div><p class="eyebrow">CATÁLOGO DE CLIENTES</p><h2>Ficha del cliente</h2></div><button class="icon" type="button" value="cancel">×</button></div><div class="form-grid">' +
+      '<label class="wide">Nombre o razón social<input name="name" required></label><label>Tipo<select name="personType"><option>Persona física</option><option>Persona moral</option></select></label><label>Contacto principal<input name="contactName"></label>' +
+      '<label>Teléfono<input name="phone" type="tel"></label><label>Teléfono alterno<input name="secondaryPhone" type="tel"></label><label>WhatsApp<input name="whatsapp" type="tel"></label><label>Correo electrónico<input name="email" type="email"></label><label>Correo alterno<input name="secondaryEmail" type="email"></label>' +
+      '<label class="wide">Dirección<input name="address"></label><label>Código postal<input name="postalCode"></label><label>Municipio<input name="municipality"></label><label>Estado<input name="state"></label><label>País<input name="country" value="México"></label>' +
+      '<label data-sens>RFC<input name="rfc"></label><label data-sens>CURP<input name="curp"></label><label data-sens>INE<input name="ine"></label><label data-sens>IMSS<input name="imss"></label><label data-sens>Banco<input name="bank"></label><label data-sens>Cuenta / CLABE<input name="bankAccount"></label>' +
+      '<label>Sexo<input name="sex"></label><label>Ocupación<input name="occupation"></label><label>Nivel de estudios<input name="education"></label><label>Estado civil<input name="maritalStatus"></label><label>¿Tiene hijos?<select name="children"><option value="">No indicado</option><option>Sí</option><option>No</option></select></label><label>Estado<select name="status"><option>Activo</option><option>Histórico</option><option>Bloqueado</option></select></label>' +
+      '<label>Facebook<input name="facebook"></label><label>Instagram<input name="instagram"></label><label class="wide">Notas y acuerdos<textarea name="notes"></textarea></label></div>' +
+      '<p class="settings-message" id="clientMsg"></p>' +
+      '<div class="dialog-actions"><button type="button" value="cancel" class="button secondary">Cancelar</button><button class="button primary" value="default">Guardar ficha</button></div></form>';
+    document.body.appendChild(dlg);
+    dlg.querySelectorAll('button[value="cancel"]').forEach(function (b) { b.onclick = function () { dlg.close(); }; });
+    dlg.querySelector('#clientEditorForm').addEventListener('submit', guardar);
+    return dlg;
+  }
+  async function editor(id) {
+    var d = formulario(), f = d.querySelector('#clientEditorForm'), c = id ? lista.filter(function (x) { return x.id === id; })[0] : null;
+    f.reset(); d.dataset.clientId = c ? c.id : ''; $('#clientMsg').textContent = '';
+    f.elements.country.value = 'México';
+    Object.keys(COL).forEach(function (k) {
+      var el = f.elements[k]; if (!el) return;
+      var v = c ? c[COL[k]] : null;
+      if (k === 'personType') v = TIPO[v] || 'Persona física'; else if (k === 'status') v = ESTADO[v] || 'Activo';
+      else if (k === 'children') v = HIJOS[v] || '';
+      if (c || k === 'country' || k === 'status') el.value = v == null ? (k === 'country' ? 'México' : '') : v;
+    });
+    var admin = P.esAdmin();
+    d.querySelectorAll('[data-sens]').forEach(function (l) { l.classList.toggle('sensitive-hidden', !admin); });
+    if (c && admin) {
+      var r = await db.rpc('leer_datos_cliente', { p_cliente: c.id });
+      var s = r.data && r.data[0];
+      if (s) { f.elements.rfc.value = s.rfc || ''; f.elements.curp.value = s.curp || ''; f.elements.ine.value = s.ine || '';
+        f.elements.imss.value = s.imss || ''; f.elements.bank.value = s.banco || ''; f.elements.bankAccount.value = s.cuenta || ''; }
+    }
+    d.querySelector('h2').textContent = c ? 'Editar ficha del cliente' : 'Nuevo cliente';
+    d.showModal();
+  }
+  async function guardar(e) {
+    e.preventDefault();
+    var d = dlg, f = e.target, msg = $('#clientMsg'), fila = {};
+    msg.style.color = 'var(--red)'; msg.textContent = '';
+    Object.keys(COL).forEach(function (k) {
+      var v = f.elements[k] ? String(f.elements[k].value).trim() : '';
+      if (k === 'personType') v = DE_TIPO[v] || 'fisica'; else if (k === 'status') v = DE_ESTADO[v] || 'activo';
+      else if (k === 'children') v = DE_HIJOS[v] || null; else if (v === '') v = null;
+      fila[COL[k]] = v;
+    });
+    if (!fila.nombre) { msg.textContent = 'Escribe el nombre o razón social.'; return; }
+    var id = d.dataset.clientId, r;
+    if (id) r = await db.from('clientes').update(fila).eq('id', id).select('id').single();
+    else r = await db.from('clientes').insert(fila).select('id').single();
+    if (r.error) { msg.textContent = 'No se pudo guardar: ' + r.error.message; return; }
+    id = r.data.id;
+    if (P.esAdmin()) {
+      var g = function (k) { return String(f.elements[k].value).trim(); };
+      var s = await db.rpc('guardar_datos_cliente', { p_cliente: id, p_rfc: g('rfc'), p_curp: g('curp'), p_ine: g('ine'), p_imss: g('imss'), p_cuenta: g('bankAccount'), p_banco: g('bank') });
+      if (s.error) { msg.textContent = 'Se guardó la ficha, pero los datos fiscales no: ' + s.error.message; await pintar($('#app')); return; }
+    }
+    d.close(); await pintar($('#app'));
+  }
+
+  P.vistas.clients = { crumb: 'CATÁLOGOS / CLIENTES', titulo: 'Clientes', render: pintar };
+})();
+
+</script>
+<script>
+/* ===== personal-v2.js ===== */
+/* PP CORE V2 · módulo Personal (misma pantalla, ficha y expediente que la V1, sobre la base nueva).
+   CURP, RFC, NSS, banco y CLABE se guardan cifrados; préstamos y nómina solo los ven director y administrativo. */
+(function () {
+  'use strict';
+  var P = window.PPV2, db = P.db, esc = P.esc, $ = function (s) { return document.querySelector(s); };
+  var TIPOS = { administracion: 'Administración', asalariado: 'Asalariado', subcontratista: 'Subcontratista' };
+  var DISP = { disponible: 'Disponible', asignado: 'Asignado', vacaciones: 'Vacaciones', permiso: 'Permiso', incapacidad: 'Incapacidad', baja: 'Baja' };
+  function inv(m) { var o = {}; Object.keys(m).forEach(function (k) { o[m[k]] = k; }); return o; }
+  var DE_TIPO = inv(TIPOS), DE_DISP = inv(DISP);
+  var MESES = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+
+  function num(v) { var n = Number(v); return isFinite(n) ? n : 0; }
+  function dinero(v) { return new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(num(v)); }
+  function fecha(v) { var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(v || '')); return m ? m[3] + '-' + MESES[Number(m[2]) - 1] + '-' + m[1] : (v || '—'); }
+  function hoy() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function nombre(p) { return [p.nombres, p.apellidos, p.apellido_materno].filter(Boolean).join(' ') || 'Sin nombre'; }
+  function esSub(p) { return p.tipo_personal === 'subcontratista'; }
+  function categoria(p) { return p.categoria || 'Sin categoría'; }
+  function especialidad(p) { return p.servicio_oficio || 'Sin especialidad'; }
+  function inicioSemana(v) { var d = new Date(v + 'T12:00:00'); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return d.toISOString().slice(0, 10); }
+
+  /* ---------- Estilos (los mismos de la V1) ---------- */
+  function estilos() {
+    if (document.getElementById('ppPersonalV2Styles')) return;
+    var s = document.createElement('style'); s.id = 'ppPersonalV2Styles';
+    s.textContent = '#personFinalDialog{width:min(860px,calc(100vw - 30px));max-width:860px;padding:0;border:0;border-radius:14px;overflow:hidden}#personFinalDialog form{margin:0}#personFinalDialog .person-form-body{padding:22px;max-height:76vh;overflow:auto}#personFinalDialog .person-form-section{grid-column:1/-1;border-top:1px solid var(--border,#dbe5e1);padding-top:16px;margin-top:3px}#personFinalDialog .person-form-section h3{margin:0 0 12px;font-size:15px}#personFinalDialog .person-salary{grid-column:1/-1;padding:14px;border:1px solid var(--border,#dbe5e1);border-radius:10px;background:#f5f8f7}#personFinalDialog .person-salary[hidden]{display:none}.person-group-title{margin:22px 0 10px;color:var(--ink,#17303a);font-size:15px}.person-catalog-row{cursor:pointer}.person-catalog-row:hover{background:#f5faf8}.person-record-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.person-record-grid>div{min-width:0}.person-record-grid strong{display:block;margin-top:4px;overflow-wrap:anywhere}.person-loan-card{border-top:1px solid var(--border,#dbe5e1);padding:16px 0}.person-loan-card:first-of-type{border-top:0;padding-top:0}.person-loan-summary{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.person-loan-summary strong{font-size:16px}.person-loan-summary small{display:block;color:var(--muted,#64747a);margin-top:4px}.person-loan-form{display:grid;grid-template-columns:150px 150px minmax(0,1fr) auto;gap:8px;align-items:end;margin-top:12px;padding:12px;background:#f5f8f7;border-radius:8px}.person-loan-form label{font-size:11px;font-weight:700;color:var(--muted,#64747a)}.person-loan-form input{display:block;width:100%;box-sizing:border-box;margin-top:4px;padding:8px;border:1px solid var(--border,#dbe5e1);border-radius:6px}.person-loan-form button{white-space:nowrap}.person-subcontract-row{cursor:pointer}.person-subcontract-row:hover{background:#f5faf8}.panel-title-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}@media(max-width:760px){.person-record-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.person-loan-form{grid-template-columns:1fr 1fr}.person-loan-form label:nth-child(3){grid-column:1/-1}.person-loan-form button{grid-column:1/-1}}@media(max-width:500px){.person-record-grid{grid-template-columns:1fr}.person-loan-form{grid-template-columns:1fr}}';
+    document.head.appendChild(s);
+  }
+
+  /* ---------- Lista ---------- */
+  var lista = [];
+  async function cargar() {
+    var r = await db.from('personas').select('*').order('nombres');
+    if (r.error) throw r.error; lista = r.data || [];
+  }
+  function fila(p) {
+    var g = esSub(p) ? especialidad(p) : categoria(p);
+    return '<tr class="person-catalog-row" data-person-open="' + esc(p.id) + '"><td><b>' + esc(nombre(p)) + '</b><small>' + esc(p.alias || '') + '</small></td><td>' + esc(TIPOS[p.tipo_personal]) +
+      '</td><td>' + esc(g) + '</td><td>' + esc(esSub(p) ? 'Destajo' : dinero(p.pago_base)) + '</td><td>' + esc(p.telefono || '—') +
+      '</td><td><span class="status ' + (p.disponibilidad === 'baja' ? 'danger-status' : 'active-status') + '">' + esc(DISP[p.disponibilidad].toUpperCase()) + '</span></td></tr>';
+  }
+  async function pintarLista(app) {
+    estilos();
+    try { await cargar(); } catch (e) { app.innerHTML = '<section class="panel"><div class="empty">No se pudo cargar el personal: ' + esc(e.message) + '</div></section>'; return; }
+    var grupos = {};
+    lista.forEach(function (p) { var k = esSub(p) ? especialidad(p) : categoria(p); ((grupos[p.tipo_personal] = grupos[p.tipo_personal] || {})[k] = (grupos[p.tipo_personal][k] || []).concat(p)); });
+    var html = ['administracion', 'asalariado', 'subcontratista'].map(function (t) {
+      var g = grupos[t] || {};
+      return Object.keys(g).sort(function (a, b) { return a.localeCompare(b); }).map(function (k) {
+        return '<h3 class="person-group-title">' + TIPOS[t] + ' · ' + esc(k) + '</h3><section class="panel table-wrap"><table class="table"><thead><tr><th>NOMBRE</th><th>TIPO</th><th>' +
+          (t === 'subcontratista' ? 'ESPECIALIDAD / SERVICIO' : 'CATEGORÍA') + '</th><th>' + (t === 'subcontratista' ? 'FORMA' : 'SALARIO DIARIO') + '</th><th>CELULAR</th><th>DISPONIBILIDAD</th></tr></thead><tbody>' +
+          g[k].sort(function (a, b) { return nombre(a).localeCompare(nombre(b)); }).map(fila).join('') + '</tbody></table></section>';
+      }).join('');
+    }).join('');
+    var cuenta = function (t) { return lista.filter(function (p) { return p.tipo_personal === t; }).length; };
+    app.innerHTML = '<div class="view-head"><div><p class="eyebrow">MOTOR DE PERSONAL</p><h2>Personal</h2><p class="subtitle">Catálogo agrupado por tipo y categoría; los subcontratistas por especialidad o servicio.</p></div>' +
+      (P.esAdmin() ? '<button class="button primary" id="personNew">+ Registrar personal</button>' : '') + '</div>' +
+      '<div class="stats"><div class="card"><div class="stat-label">ADMINISTRACIÓN</div><div class="stat-value">' + cuenta('administracion') + '</div></div><div class="card"><div class="stat-label">ASALARIADOS</div><div class="stat-value">' + cuenta('asalariado') +
+      '</div></div><div class="card"><div class="stat-label">SUBCONTRATISTAS</div><div class="stat-value">' + cuenta('subcontratista') + '</div></div><div class="card"><div class="stat-label">TOTAL</div><div class="stat-value">' + lista.length + '</div></div></div>' +
+      (html || '<section class="panel"><p class="empty">No hay personal registrado.</p></section>');
+    var nuevo = $('#personNew'); if (nuevo) nuevo.onclick = function () { formulario(null); };
+    document.querySelectorAll('[data-person-open]').forEach(function (r) { r.onclick = function () { expediente(r.dataset.personOpen); }; });
+    P.sincronizado();
+  }
+
+  /* ---------- Ficha (formulario) ---------- */
+  var COL = { names: 'nombres', lastName: 'apellidos', secondLastName: 'apellido_materno', alias: 'alias', category: 'categoria', serviceOffer: 'servicio_oficio',
+    startDate: 'fecha_alta', email: 'correo', phone: 'telefono', address: 'direccion', emergencyContact: 'contacto_emergencia', emergencyPhone: 'telefono_emergencia',
+    birthDate: 'fecha_nacimiento', sex: 'sexo', maritalStatus: 'estado_civil', notes: 'notas' };
+  var dlg;
+  function construir() {
+    if (dlg) dlg.remove();
+    dlg = document.createElement('dialog'); dlg.id = 'personFinalDialog';
+    dlg.innerHTML = '<form id="personFinalForm"><div class="dialog-head"><div><p class="eyebrow">EXPEDIENTE PERSONAL</p><h2></h2></div><button type="button" class="icon" data-close>×</button></div><div class="person-form-body"><div class="form-grid">' +
+      '<label class="wide">Nombre(s)<input name="names" required></label><label>Apellido paterno<input name="lastName"></label><label>Apellido materno<input name="secondLastName"></label><label>Apodo<input name="alias" placeholder="Cómo lo identificas"></label>' +
+      '<label>Tipo de personal<select name="personType"><option>Administración</option><option>Asalariado</option><option>Subcontratista</option></select></label>' +
+      '<label class="wide" data-category-label>Categoría<input name="category" placeholder="Ej. Oficial, ayudante, residente"></label>' +
+      '<label class="wide">Oficio / especialidad / servicio<input name="serviceOffer" placeholder="Ej. Albañilería, plomería, electricidad"></label>' +
+      '<label>Fecha de alta<input name="startDate" type="date" required></label><label>Disponibilidad<select name="availability"><option>Disponible</option><option>Asignado</option><option>Vacaciones</option><option>Permiso</option><option>Incapacidad</option><option>Baja</option></select></label>' +
+      '<div class="person-salary" data-salary-fields><div class="form-grid"><label>Forma de pago<select name="paymentMethod"><option>Salario diario</option></select></label><label>Salario diario<input name="payRate" type="number" min="0" step="0.01" placeholder="Importe diario"></label></div></div>' +
+      '<div class="person-form-section"><h3>Datos generales</h3><div class="form-grid"><label>Correo electrónico<input name="email" type="email"></label><label>Número de celular<input name="phone" type="tel"></label><label class="wide">Dirección<input name="address"></label>' +
+      '<label data-sens>Banco<input name="bank"></label><label data-sens>Cuenta / CLABE<input name="bankAccount"></label><label>Contacto de emergencia<input name="emergencyContact"></label><label>Número celular de emergencia<input name="emergencyPhone" type="tel"></label>' +
+      '<label data-sens>CURP<input name="curp"></label><label data-sens>RFC<input name="rfc"></label><label data-sens>NSS<input name="nss"></label><label>Fecha de nacimiento<input name="birthDate" type="date"></label><label>Sexo<input name="sex"></label><label>Estado civil<input name="maritalStatus"></label>' +
+      '<label class="wide">Observaciones<textarea name="notes"></textarea></label></div></div></div></div><p class="settings-message" id="personMsg" style="padding:0 22px"></p>' +
+      '<div class="dialog-actions"><button type="button" class="button secondary" data-cancel>Cancelar</button><button type="submit" class="button primary">Guardar personal</button></div></form>';
+    document.body.appendChild(dlg);
+    var f = dlg.querySelector('form'), tipo = f.elements.personType, sal = dlg.querySelector('[data-salary-fields]'), lab = dlg.querySelector('[data-category-label]');
+    function alternar() {
+      var sub = tipo.value === 'Subcontratista'; sal.hidden = sub; f.elements.payRate.disabled = sub; f.elements.paymentMethod.disabled = sub;
+      lab.firstChild.nodeValue = sub ? 'Especialidad / categoría' : 'Categoría';
+      f.elements.category.placeholder = sub ? 'Ej. Instalaciones, estructura, plomería' : 'Ej. Oficial, ayudante, residente';
+    }
+    tipo.onchange = alternar; dlg._alternar = alternar;
+    dlg.querySelector('[data-close]').onclick = function () { dlg.close(); };
+    dlg.querySelector('[data-cancel]').onclick = function () { dlg.close(); };
+    f.addEventListener('submit', guardar);
+  }
+  async function formulario(id) {
+    estilos(); construir();
+    var f = dlg.querySelector('form'), p = id ? lista.filter(function (x) { return x.id === id; })[0] : null;
+    dlg.dataset.personId = p ? p.id : '';
+    dlg.querySelector('h2').textContent = p ? 'Editar personal' : 'Registrar personal';
+    Object.keys(COL).forEach(function (k) { var v = p ? p[COL[k]] : null; f.elements[k].value = v == null ? '' : v; });
+    if (!p) f.elements.startDate.value = hoy();
+    f.elements.personType.value = TIPOS[p ? p.tipo_personal : 'asalariado'];
+    f.elements.availability.value = DISP[p ? p.disponibilidad : 'disponible'];
+    f.elements.payRate.value = p && !esSub(p) ? p.pago_base : '';
+    dlg._alternar();
+    var admin = P.esAdmin();
+    dlg.querySelectorAll('[data-sens]').forEach(function (l) { l.classList.toggle('sensitive-hidden', !admin); });
+    if (p && admin) {
+      var r = await db.rpc('leer_datos_sensibles', { p_persona: p.id }), s = r.data && r.data[0];
+      if (s) { f.elements.curp.value = s.curp || ''; f.elements.rfc.value = s.rfc || ''; f.elements.nss.value = s.nss || ''; f.elements.bank.value = s.banco || ''; f.elements.bankAccount.value = s.clabe || ''; }
+    }
+    dlg.showModal();
+  }
+  async function guardar(e) {
+    e.preventDefault();
+    var f = e.target, msg = $('#personMsg'), fila = {};
+    msg.style.color = 'var(--red)'; msg.textContent = '';
+    Object.keys(COL).forEach(function (k) { var v = String(f.elements[k].value || '').trim(); fila[COL[k]] = v === '' ? null : v; });
+    if (!fila.nombres) { msg.textContent = 'Escribe el nombre.'; return; }
+    if (!fila.fecha_alta) fila.fecha_alta = hoy();
+    fila.tipo_personal = DE_TIPO[f.elements.personType.value] || 'asalariado';
+    fila.disponibilidad = DE_DISP[f.elements.availability.value] || 'disponible';
+    if (fila.tipo_personal === 'subcontratista') { fila.tipo_pago = 'destajo'; fila.pago_base = 0; }
+    else { fila.tipo_pago = 'dia'; fila.pago_base = num(f.elements.payRate.value); }
+    fila.activo = fila.disponibilidad !== 'baja';
+    var id = dlg.dataset.personId, r;
+    if (id) r = await db.from('personas').update(fila).eq('id', id).select('id').single();
+    else r = await db.from('personas').insert(fila).select('id').single();
+    if (r.error) { msg.textContent = 'No se pudo guardar: ' + r.error.message; return; }
+    id = r.data.id;
+    if (P.esAdmin()) {
+      var g = function (k) { var v = String(f.elements[k].value || '').trim(); return v === '' ? null : v; };
+      var s = await db.rpc('guardar_datos_sensibles', { p_persona: id, p_curp: g('curp'), p_rfc: g('rfc'), p_nss: g('nss'), p_clabe: g('bankAccount'), p_banco: g('bank') });
+      if (s.error) { msg.textContent = 'Se guardó la ficha, pero los datos fiscales no: ' + s.error.message; await pintarLista($('#app')); return; }
+    }
+    dlg.close();
+    if (window.__expedienteActual === id) await expediente(id); else await pintarLista($('#app'));
+  }
+
+  /* ---------- Expediente ---------- */
+  function celda(titulo, valor) { return '<div><span class="eyebrow">' + titulo + '</span><strong>' + esc(valor || '—') + '</strong></div>'; }
+  async function expediente(id) {
+    estilos(); window.__expedienteActual = id; var app = $('#app'), admin = P.esAdmin();
+    var r = await db.from('personas').select('*').eq('id', id).single();
+    if (r.error || !r.data) { app.innerHTML = '<section class="panel"><div class="empty">No se encontró a la persona.</div></section>'; return; }
+    var p = r.data, sub = esSub(p), banco = '';
+    if (admin) { var s = await db.rpc('leer_datos_sensibles', { p_persona: id }); s = s.data && s.data[0]; if (s) banco = [s.banco, s.clabe].filter(Boolean).join(' · '); }
+    $('#pageTitle').textContent = 'Expediente de Personal'; $('#crumb').textContent = 'PERSONAL / ' + nombre(p);
+    var cabeza = '<div class="view-head"><div><p class="eyebrow">EXPEDIENTE PERSONAL · ' + esc(TIPOS[p.tipo_personal]) + '</p><h2>' + esc(nombre(p)) + '</h2><p class="subtitle">' + esc(p.alias || '') + ' · Alta: ' + esc(fecha(p.fecha_alta)) +
+      '</p></div><div><button class="button secondary" id="personBack">← Personal</button> ' + (admin ? '<button class="button secondary" id="personEdit">Editar datos</button>' : '') + '</div></div>';
+    var datos = '<section class="panel"><div class="person-record-grid">' + celda('TIPO', TIPOS[p.tipo_personal]) + (sub ? celda('ESPECIALIDAD / SERVICIO', especialidad(p)) : celda('CATEGORÍA', categoria(p)) + celda('OFICIO', p.servicio_oficio)) +
+      celda('DISPONIBILIDAD', DISP[p.disponibilidad]) + celda('CELULAR', p.telefono) + celda('CORREO', p.correo) + celda('DIRECCIÓN', p.direccion) + (admin ? celda('BANCO / CLABE', banco) : '') + '</div></section>';
+    app.innerHTML = cabeza + datos + '<div id="personRecordBody"><section class="panel"><p class="empty">Cargando…</p></section></div>';
+    $('#personBack').onclick = function () { window.__expedienteActual = null; P.go('people'); };
+    var ed = $('#personEdit'); if (ed) ed.onclick = function () { formulario(id); };
+    if (sub) await cuerpoSub(p); else await cuerpoEmpleado(p, hoy().slice(0, 7), admin);
+    P.sincronizado();
+  }
+
+  async function cuerpoEmpleado(p, mes, admin) {
+    var host = $('#personRecordBody');
+    var res = await Promise.all([
+      db.from('asistencias').select('estado,bitacoras(fecha,proyectos(nombre))').eq('persona_id', p.id),
+      db.from('personas_historial').select('fecha,categoria,salario_diario').eq('persona_id', p.id).order('fecha', { ascending: false }),
+      admin ? db.from('prestamos').select('*').eq('persona_id', p.id).order('fecha', { ascending: false }) : Promise.resolve({ data: [] })]);
+    var asis = (res[0].data || []).map(function (a) { return { estado: a.estado, fecha: a.bitacoras && a.bitacoras.fecha, obra: a.bitacoras && a.bitacoras.proyectos && a.bitacoras.proyectos.nombre }; }).filter(function (a) { return a.fecha; });
+    var valor = function (a) { return a.estado === 'presente' ? 1 : a.estado === 'medio_dia' ? 0.5 : 0; }, tarifa = num(p.pago_base);
+    var delMes = asis.filter(function (a) { return a.fecha.slice(0, 7) === mes; }).sort(function (a, b) { return a.fecha.localeCompare(b.fecha); });
+    var dias = delMes.reduce(function (n, a) { return n + valor(a); }, 0);
+    var filasMes = delMes.map(function (a) {
+      return '<tr><td>' + esc(fecha(a.fecha)) + '</td><td>' + esc(a.obra || '—') + '</td><td>' + esc({ presente: 'Asistió', medio_dia: 'Media jornada', falta: 'Falta', permiso: 'Permiso' }[a.estado] || a.estado) + '</td><td>' + dinero(tarifa) + '</td><td>' + dinero(valor(a) * tarifa) + '</td></tr>'; }).join('');
+    var semanas = {};
+    asis.forEach(function (a) { var k = inicioSemana(a.fecha), w = semanas[k] = semanas[k] || { inicio: k, dias: 0, obras: [] }; w.dias += valor(a); if (valor(a) && a.obra && w.obras.indexOf(a.obra) < 0) w.obras.push(a.obra); });
+    var filasSem = Object.keys(semanas).sort().reverse().map(function (k) { var w = semanas[k];
+      return '<tr><td><b>' + esc(fecha(w.inicio)) + '</b></td><td>' + esc(w.obras.join(', ') || '—') + '</td><td>' + w.dias + '</td><td>' + dinero(w.dias * tarifa) + '</td></tr>'; }).join('');
+    var generado = asis.reduce(function (n, a) { return n + valor(a) * tarifa; }, 0);
+    var hist = res[1].data || [];
+    var filasHist = (hist.length ? hist : [{ fecha: p.fecha_alta, categoria: categoria(p), salario_diario: p.pago_base }]).map(function (x) {
+      return '<tr><td>' + esc(fecha(x.fecha)) + '</td><td>' + esc(x.categoria || '—') + '</td><td>' + dinero(x.salario_diario) + '</td></tr>'; }).join('');
+    var prest = res[2].data || [], descuentos = [];
+    if (prest.length) { var d = await db.from('descuentos_prestamo').select('*').in('prestamo_id', prest.map(function (x) { return x.id; })).order('fecha'); descuentos = d.data || []; }
+    var tarjetas = prest.map(function (l) {
+      var ds = descuentos.filter(function (x) { return x.prestamo_id === l.id; }), pagado = ds.reduce(function (n, x) { return n + num(x.importe); }, 0);
+      return '<div class="person-loan-card"><div class="person-loan-summary"><div><strong>' + dinero(l.monto) + '</strong><small>Solicitado: ' + esc(fecha(l.fecha)) + ' · ' + (l.estado === 'liquidado' ? 'Liquidado' : 'Activo') + ' · ' + l.descuentos_previstos +
+        ' descuentos previstos</small></div><div><b>Saldo: ' + dinero(l.saldo) + '</b><br><button type="button" class="button secondary" data-loan-toggle="' + esc(l.id) + '">+ Agregar descuento</button></div></div>' +
+        '<div class="table-wrap" style="margin-top:10px"><table class="table"><thead><tr><th>FECHA</th><th>DESCUENTO / ABONO</th><th>NOTAS</th></tr></thead><tbody>' +
+        (ds.map(function (x) { return '<tr><td>' + esc(fecha(x.fecha)) + '</td><td>' + dinero(x.importe) + '</td><td>' + esc(x.nota || '—') + '</td></tr>'; }).join('') || '<tr><td colspan="3" class="empty">Sin descuentos registrados.</td></tr>') +
+        '</tbody><tfoot><tr><th>TOTAL DESCONTADO</th><th>' + dinero(pagado) + '</th><th></th></tr></tfoot></table></div><div data-loan-inline="' + esc(l.id) + '"></div></div>'; }).join('');
+    host.innerHTML = '<section class="panel"><div class="panel-title-row"><h3>Récord de asistencias del mes</h3><label style="font-size:12px">Mes <input type="month" value="' + esc(mes) + '" data-attendance-month></label></div><p class="change">' + dias +
+      ' día(s) con asistencia · Total generado: ' + dinero(dias * tarifa) + '</p><div class="table-wrap"><table class="table"><thead><tr><th>FECHA</th><th>OBRA</th><th>ESTADO</th><th>SALARIO DIARIO</th><th>GENERADO</th></tr></thead><tbody>' +
+      (filasMes || '<tr><td colspan="5" class="empty">No hay asistencias registradas en este mes.</td></tr>') + '</tbody></table></div></section>' +
+      '<section class="panel"><div class="panel-title-row"><h3>Nómina semanal generada</h3><strong>Generado a la fecha: ' + dinero(generado) + '</strong></div><div class="table-wrap"><table class="table"><thead><tr><th>SEMANA</th><th>OBRA(S)</th><th>DÍAS</th><th>TOTAL GENERADO</th></tr></thead><tbody>' +
+      (filasSem || '<tr><td colspan="4" class="empty">Sin asistencia registrada.</td></tr>') + '</tbody></table></div></section>' +
+      '<section class="panel"><div class="panel-title-row"><h3>Historial de categorías y salario</h3><strong>Salario diario: ' + dinero(p.pago_base) + '</strong></div><div class="table-wrap"><table class="table"><thead><tr><th>FECHA</th><th>CATEGORÍA</th><th>SALARIO DIARIO</th></tr></thead><tbody>' + filasHist + '</tbody></table></div></section>' +
+      (admin ? '<section class="panel"><div class="panel-title-row"><h3>Préstamos y descuentos</h3></div><form class="person-loan-form" data-new-loan><label>Fecha<input name="date" type="date" value="' + hoy() + '"></label><label>Monto<input name="amount" type="number" min="0" step="0.01" placeholder="0.00" required></label><label>Notas<input name="notes" placeholder="Motivo o acuerdo"></label><label>Descuentos previstos<input name="installments" type="number" min="1" step="1" value="1"></label><button type="submit" class="button primary">+ Nuevo préstamo</button></form>' +
+        (tarjetas || '<p class="empty" style="margin-top:14px">No hay préstamos registrados.</p>') + '</section>' : '');
+    var sel = host.querySelector('[data-attendance-month]'); if (sel) sel.onchange = function () { cuerpoEmpleado(p, sel.value || mes, admin); };
+    var nf = host.querySelector('[data-new-loan]');
+    if (nf) nf.onsubmit = async function (e) {
+      e.preventDefault(); var f = new FormData(nf), monto = num(f.get('amount')); if (monto <= 0) return;
+      var r = await db.from('prestamos').insert({ persona_id: p.id, fecha: String(f.get('date') || hoy()), monto: monto, descuentos_previstos: Math.max(1, num(f.get('installments'))), notas: String(f.get('notes') || '').trim() || null });
+      if (r.error) { alert(r.error.message); return; } cuerpoEmpleado(p, mes, admin);
+    };
+    host.querySelectorAll('[data-loan-toggle]').forEach(function (b) {
+      b.onclick = function () {
+        var h = host.querySelector('[data-loan-inline="' + b.dataset.loanToggle + '"]'); if (!h) return;
+        if (h.innerHTML) { h.innerHTML = ''; return; }
+        h.innerHTML = '<form class="person-loan-form"><label>Fecha<input name="date" type="date" value="' + hoy() + '"></label><label>Descuento<input name="amount" type="number" min="0" step="0.01" required placeholder="0.00"></label><label>Nota<input name="note" placeholder="Semana, concepto o acuerdo"></label><button type="submit" class="button primary">Guardar descuento</button></form>';
+        var form = h.querySelector('form');
+        form.onsubmit = async function (e) {
+          e.preventDefault(); var f = new FormData(form), imp = num(f.get('amount')); if (imp <= 0) return;
+          var r = await db.from('descuentos_prestamo').insert({ prestamo_id: b.dataset.loanToggle, fecha: String(f.get('date') || hoy()), importe: imp, nota: String(f.get('note') || '').trim() || null });
+          if (r.error) { alert(r.error.message); return; } cuerpoEmpleado(p, mes, admin);
+        };
+      };
+    });
+  }
+
+  async function cuerpoSub(p) {
+    var host = $('#personRecordBody');
+    var r = await db.from('subcontratos').select('*,proyectos(codigo,nombre),pagos_subcontrato(monto)').eq('persona_id', p.id).order('creado_en', { ascending: false });
+    var subs = r.data || [], vigentes = subs.filter(function (s) { return s.estado === 'activo'; });
+    var fila = function (s) {
+      var pagado = (s.pagos_subcontrato || []).reduce(function (n, x) { return n + num(x.monto); }, 0);
+      return '<tr class="person-subcontract-row"><td><b>' + esc((s.proyectos && s.proyectos.codigo) || '—') + '</b></td><td>' + esc((s.proyectos && s.proyectos.nombre) || '—') + '</td><td>' + esc(s.servicio) + '</td><td>' + esc(fecha(String(s.creado_en).slice(0, 10))) +
+        '</td><td>' + dinero(s.monto_pactado) + '</td><td>' + dinero(pagado) + '</td><td>' + esc({ activo: 'Activo', terminado: 'Concluido', cancelado: 'Cancelado' }[s.estado]) + '</td></tr>'; };
+    var tabla = function (items, vacio) {
+      return '<div class="table-wrap"><table class="table"><thead><tr><th>CLAVE</th><th>OBRA</th><th>SERVICIO / CONCEPTO</th><th>INICIO</th><th>PACTADO</th><th>PAGADO</th><th>ESTADO</th></tr></thead><tbody>' +
+        (items.map(fila).join('') || '<tr><td colspan="7" class="empty">' + vacio + '</td></tr>') + '</tbody></table></div>'; };
+    host.innerHTML = '<section class="panel"><div class="panel-title-row"><h3>Subcontratos vigentes</h3></div>' + tabla(vigentes, 'Sin subcontratos vigentes.') + '</section>' +
+      '<section class="panel"><div class="panel-title-row"><h3>Historial general de subcontratos</h3></div>' + tabla(subs, 'Sin subcontratos registrados.') + '</section>';
+  }
+
+  P.vistas.people = { crumb: 'MOTOR DE PERSONAL', titulo: 'Personal', render: function (app) { window.__expedienteActual = null; return pintarLista(app); } };
+})();
+
+</script>
+<script>
+/* ===== costos-v2.js ===== */
+/* PP CORE V2 · Costos: Materiales (catálogo de insumos) y Proveedores.
+   El precio de presupuesto lo fijas tú; el precio real de compra vive en Compras y nunca lo modifica. */
+(function () {
+  'use strict';
+  var P = window.PPV2, db = P.db, esc = P.esc, $ = function (s) { return document.querySelector(s); };
+  var UNIDADES = ['m', 'm²', 'm³', 'kg', 't', 'l', 'pza', 'jornada', 'día', 'hora', 'semana', 'lote', 'servicio', 'saco', 'litro', 'ton'];
+  var TIPOS = { material: 'Material', mano_obra: 'Mano de obra', maquinaria: 'Maquinaria / equipo' };
+  var DE_TIPO = {}; Object.keys(TIPOS).forEach(function (k) { DE_TIPO[TIPOS[k]] = k; });
+  var MESES = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+
+  function num(v) { var n = Number(v); return isFinite(n) ? n : 0; }
+  function dinero(v) { return new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 2 }).format(num(v)); }
+  function fecha(v) { var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(v || '')); return m ? m[3] + '-' + MESES[Number(m[2]) - 1] + '-' + m[1] : (v || '—'); }
+  // Factor de Salario Real (misma fórmula de la V1)
+  function factor(v) { return (365 + num(v.ag) + num(v.vac) * num(v.pv) / 100) / Math.max(1, num(v.lab || 312) - num(v.fest) - num(v.clima) - num(v.perm)); }
+
+  var materiales = [], familias = [];
+  async function cargar() {
+    var r = await Promise.all([db.from('materiales').select('*,familias_material(nombre)').order('nombre'), db.from('familias_material').select('id,nombre').order('nombre')]);
+    if (r[0].error) throw r[0].error;
+    materiales = r[0].data || []; familias = r[1].data || [];
+  }
+  function nombreFamilia(m) { return (m.familias_material && m.familias_material.nombre) || 'Sin familia'; }
+
+  /* ---------- Materiales ---------- */
+  async function pintarMateriales(app) {
+    try { await cargar(); } catch (e) { app.innerHTML = '<section class="panel"><div class="empty">No se pudo cargar el catálogo: ' + esc(e.message) + '</div></section>'; return; }
+    var admin = P.esAdmin();
+    var filas = materiales.slice().sort(function (a, b) {
+      return nombreFamilia(a).localeCompare(nombreFamilia(b), 'es', { sensitivity: 'base' }) || String(a.nombre).localeCompare(String(b.nombre), 'es', { sensitivity: 'base' }); });
+    var cuerpo = '', ultima = '';
+    filas.forEach(function (m) {
+      var f = nombreFamilia(m);
+      if (f !== ultima) { cuerpo += '<tr class="family-group"><th colspan="6">' + esc(f) + '</th></tr>'; ultima = f; }
+      cuerpo += '<tr class="' + (m.activo ? '' : 'row-baja') + '"><td>' + esc(m.codigo || '') + '</td><td><b>' + esc(m.nombre) + '</b><small>' + esc(TIPOS[m.tipo] || 'Material') + (m.activo ? '' : ' · BAJA') + '</small></td><td>' + esc(m.unidad || '') +
+        '</td><td>' + dinero(m.precio_presupuesto) + '</td><td>' + esc(fecha(m.precio_actualizado)) + '</td><td>' + (admin ? '<button class="icon-action button secondary" data-basic-edit="' + esc(m.id) + '" title="Editar material">✎</button>' : '') + '</td></tr>';
+    });
+    app.innerHTML = '<div class="view-head"><div><p class="eyebrow">CATÁLOGO DE MATERIALES</p><h2>Materiales</h2><p class="subtitle">Precios separados para presupuestar y comprar.</p></div>' +
+      (admin ? '<button class="button primary" id="nuevoMaterial">+ Nuevo material</button>' : '') + '</div>' +
+      '<section class="panel"><p class="change">El precio para presupuesto permanece vivo hasta autorizarlo. Al autorizar, queda congelado dentro de ese presupuesto y ya no cambia aunque el catálogo se actualice.</p></section>' +
+      '<section class="panel table-wrap"><table class="table"><thead><tr><th>CLAVE</th><th>MATERIAL</th><th>UNIDAD</th><th>PRECIO VIGENTE PARA CÁLCULOS</th><th>ACTUALIZADO</th><th>ACCIÓN</th></tr></thead><tbody>' +
+      (cuerpo || '<tr><td colspan="6" class="empty">Aún no hay materiales básicos.</td></tr>') + '</tbody></table></section>';
+    var nuevo = $('#nuevoMaterial'); if (nuevo) nuevo.onclick = function () { editor(null); };
+    document.querySelectorAll('[data-basic-edit]').forEach(function (b) { b.onclick = function () { editor(b.dataset.basicEdit); }; });
+    P.sincronizado();
+  }
+
+  function editor(id) {
+    var viejo = id ? materiales.filter(function (m) { return m.id === id; })[0] : null, sucio = false;
+    var d = document.createElement('dialog'); d.className = 'material-single-dialog';
+    var nombres = materiales.map(function (m) { return m.nombre; }).filter(function (x, i, a) { return x && a.indexOf(x) === i; });
+    d.innerHTML = '<form><div class="dialog-head"><div><p class="eyebrow">CATÁLOGO DE INSUMOS</p><h2>' + (viejo ? 'Editar material' : 'Alta de material') + '</h2></div><button type="button" class="icon" data-close>×</button></div><div class="form-grid">' +
+      '<label class="wide">Nombre<input name="name" list="basicNames" required autocomplete="off"></label>' +
+      '<label>Tipo<select name="type"><option>Material</option><option>Mano de obra</option><option>Maquinaria / equipo</option></select></label>' +
+      '<label>Unidad<select name="unit">' + UNIDADES.map(function (u) { return '<option>' + esc(u) + '</option>'; }).join('') + '</select></label>' +
+      '<label class="wide">Familia<input name="family" list="basicFamilies" autocomplete="off"></label>' +
+      '<label class="wide" data-price-label>Precio vigente para cálculos (MXN)<input name="price" type="number" min="0" step="0.01" required></label>' +
+      '<section class="fasar-single wide" hidden><h3>Factor de Salario Real (FASAR)</h3><div class="form-grid">' +
+      '<label>Aguinaldo<input name="ag" type="number" min="0" value="15"></label><label>Prima vacacional (%)<input name="pv" type="number" min="0" value="25"></label><label>Vacaciones<input name="vac" type="number" min="0" value="12"></label>' +
+      '<label>Días laborables<input name="lab" type="number" min="1" value="312"></label><label>Días festivos<input name="fest" type="number" min="0" value="0"></label><label>Días perdidos por clima<input name="clima" type="number" min="0" value="0"></label><label>Permisos/enfermedad<input name="perm" type="number" min="0" value="0"></label>' +
+      '</div><p class="fasar-single-result"></p></section></div><p class="settings-message" data-msg></p>' +
+      '<div class="dialog-actions"><button type="button" class="button secondary" data-cancel>Cancelar</button>' +
+      (viejo ? '<button type="button" class="button danger" data-retire>' + (viejo.activo ? 'Dar de baja' : 'Reactivar') + '</button><button type="button" class="button danger" data-delete>Eliminar</button>' : '') +
+      '<button type="submit" class="button primary">Guardar</button></div></form>' +
+      '<datalist id="basicNames">' + nombres.map(function (x) { return '<option value="' + esc(x) + '">'; }).join('') + '</datalist><datalist id="basicFamilies">' + familias.map(function (x) { return '<option value="' + esc(x.nombre) + '">'; }).join('') + '</datalist>';
+    document.body.appendChild(d);
+    var f = d.querySelector('form'), tipo = f.elements.type, precio = f.elements.price, caja = d.querySelector('.fasar-single'), msg = d.querySelector('[data-msg]');
+    msg.style.color = 'var(--red)';
+    if (viejo) {
+      f.elements.name.value = viejo.nombre; tipo.value = TIPOS[viejo.tipo]; f.elements.unit.value = viejo.unidad; f.elements.family.value = viejo.familias_material ? viejo.familias_material.nombre : '';
+      precio.value = viejo.tipo === 'mano_obra' ? (viejo.salario_nominal != null ? viejo.salario_nominal : viejo.precio_presupuesto) : viejo.precio_presupuesto;
+      if (viejo.tipo === 'mano_obra') {
+        var mapa = { ag: 'fasar_aguinaldo', pv: 'fasar_prima_vacacional', vac: 'fasar_vacaciones', lab: 'fasar_laborables', fest: 'fasar_festivos', clima: 'fasar_clima', perm: 'fasar_permisos' };
+        Object.keys(mapa).forEach(function (k) { if (viejo[mapa[k]] != null) f.elements[k].value = viejo[mapa[k]]; });
+      }
+    }
+    function valores() { var o = {}; ['ag', 'pv', 'vac', 'lab', 'fest', 'clima', 'perm'].forEach(function (k) { o[k] = f.elements[k].value; }); return o; }
+    function actualizar() {
+      var mo = tipo.value === 'Mano de obra'; caja.hidden = !mo;
+      d.querySelector('[data-price-label]').firstChild.textContent = mo ? 'Salario diario nominal (MXN)' : 'Precio vigente para cálculos (MXN)';
+      if (mo) { var fac = factor(valores()); d.querySelector('.fasar-single-result').innerHTML = '<b>Factor: ' + fac.toFixed(4) + '</b> · Costo vigente para cálculos: <strong>' + dinero(num(precio.value) * fac) + '</strong>'; }
+    }
+    f.addEventListener('input', function () { sucio = true; actualizar(); }); tipo.onchange = actualizar; actualizar();
+    d.querySelector('[data-close]').onclick = function () { d.close(); }; d.querySelector('[data-cancel]').onclick = function () { d.close(); };
+    d.addEventListener('close', function () { d.remove(); });
+    var baja = d.querySelector('[data-retire]');
+    if (baja) baja.onclick = async function () {
+      var r = await db.from('materiales').update({ activo: !viejo.activo }).eq('id', viejo.id).select('id').single();
+      if (r.error) { msg.textContent = r.error.message; return; } d.close(); pintarMateriales($('#app'));
+    };
+    var borrar = d.querySelector('[data-delete]');
+    if (borrar) borrar.onclick = async function () {
+      if (!confirm('¿Eliminar este material?')) return;
+      var r = await db.from('materiales').delete().eq('id', viejo.id);
+      if (r.error) { msg.textContent = r.error.message; return; } d.close(); pintarMateriales($('#app'));
+    };
+    f.onsubmit = async function (e) {
+      e.preventDefault(); msg.textContent = '';
+      var nombre = String(f.elements.name.value).trim(), famNombre = String(f.elements.family.value).trim(), fila = { nombre: nombre, tipo: DE_TIPO[tipo.value] || 'material', unidad: f.elements.unit.value };
+      if (!nombre) { msg.textContent = 'Escribe el nombre.'; return; }
+      if (famNombre) {
+        var existente = familias.filter(function (x) { return x.nombre.toLowerCase() === famNombre.toLowerCase(); })[0];
+        if (existente) fila.familia_id = existente.id;
+        else { var nf = await db.from('familias_material').insert({ nombre: famNombre }).select('id').single(); if (nf.error) { msg.textContent = 'No se pudo crear la familia: ' + nf.error.message; return; } fila.familia_id = nf.data.id; }
+      } else fila.familia_id = null;
+      if (fila.tipo === 'mano_obra') {
+        if (!(viejo && viejo.tipo === 'mano_obra' && !sucio)) {
+          var v = valores(), base = num(precio.value), fac = factor(v);
+          fila.salario_nominal = base; fila.fasar_aguinaldo = num(v.ag); fila.fasar_prima_vacacional = num(v.pv); fila.fasar_vacaciones = num(v.vac);
+          fila.fasar_laborables = num(v.lab); fila.fasar_festivos = num(v.fest); fila.fasar_clima = num(v.clima); fila.fasar_permisos = num(v.perm);
+          fila.factor_fasar = Number(fac.toFixed(4)); fila.precio_presupuesto = Number((base * fac).toFixed(2));
+        }
+      } else {
+        fila.precio_presupuesto = num(precio.value); fila.salario_nominal = null; fila.factor_fasar = null;
+        ['fasar_aguinaldo', 'fasar_prima_vacacional', 'fasar_vacaciones', 'fasar_laborables', 'fasar_festivos', 'fasar_clima', 'fasar_permisos'].forEach(function (k) { fila[k] = null; });
+      }
+      var r = viejo ? await db.from('materiales').update(fila).eq('id', viejo.id).select('id').single() : await db.from('materiales').insert(fila).select('id').single();
+      if (r.error) { msg.textContent = 'No se pudo guardar: ' + r.error.message; return; }
+      d.close(); pintarMateriales($('#app'));
+    };
+    d.showModal();
+  }
+
+  /* ---------- Proveedores: último precio real de compra ---------- */
+  async function pintarProveedores(app) {
+    var r = await db.from('solicitudes_compra').select('descripcion,unidad,precio_real,comprada_en,entregada_en,proveedores(nombre),materiales(familias_material(nombre))')
+      .in('estado', ['comprada', 'entregada']).not('proveedor_id', 'is', null);
+    if (r.error) { app.innerHTML = '<section class="panel"><div class="empty">No se pudieron cargar los precios: ' + esc(r.error.message) + '</div></section>'; return; }
+    var catalogo = {};
+    (r.data || []).forEach(function (x) {
+      var prov = x.proveedores && x.proveedores.nombre; if (!x.descripcion || !prov) return;
+      var fam = (x.materiales && x.materiales.familias_material && x.materiales.familias_material.nombre) || 'Sin familia', clave = fam + '|' + x.descripcion, f = x.entregada_en || x.comprada_en;
+      if (!catalogo[clave] || String(f) > String(catalogo[clave].fecha)) catalogo[clave] = { familia: fam, material: x.descripcion, proveedor: prov, precio: num(x.precio_real), fecha: f };
+    });
+    var filas = Object.keys(catalogo).map(function (k) { return catalogo[k]; }).sort(function (a, b) { return (a.familia + a.material).localeCompare(b.familia + b.material, 'es'); });
+    var proveedores = filas.map(function (x) { return x.proveedor; }).filter(function (x, i, a) { return a.indexOf(x) === i; });
+    var grupos = {}; filas.forEach(function (x) { (grupos[x.familia] = grupos[x.familia] || []).push(x); });
+    var html = Object.keys(grupos).sort().map(function (f) {
+      return '<section class="panel table-wrap" data-grupo><div class="panel-title-row"><h3>' + esc(f) + '</h3><span class="change">' + grupos[f].length + ' material(es)</span></div><table class="table"><thead><tr><th>MATERIAL</th><th>ÚLTIMO PRECIO DE COMPRA</th><th>PROVEEDOR</th><th>FECHA ÚLTIMA COMPRA</th></tr></thead><tbody>' +
+        grupos[f].map(function (x) { return '<tr data-texto="' + esc((x.material + ' ' + x.proveedor).toLowerCase()) + '"><td><b>' + esc(x.material) + '</b></td><td>' + dinero(x.precio) + '</td><td>' + esc(x.proveedor) + '</td><td>' + esc(fecha(x.fecha)) + '</td></tr>'; }).join('') + '</tbody></table></section>';
+    }).join('');
+    app.innerHTML = '<div class="view-head"><div><p class="eyebrow">CATÁLOGO DE PROVEEDORES</p><h2>Proveedores y precios de compra</h2><p class="subtitle">Último precio real por material, familia y proveedor.</p></div></div>' +
+      '<div class="stats"><div class="card"><div class="stat-label">PROVEEDORES</div><div class="stat-value">' + proveedores.length + '</div></div><div class="card"><div class="stat-label">MATERIALES CON HISTORIAL</div><div class="stat-value">' + filas.length + '</div></div></div>' +
+      '<section class="panel"><div class="filter-row"><label>Buscar material o proveedor<input id="supplierSearch" placeholder="Ej. cemento, Construrama"></label></div></section><div id="supplierCatalog">' +
+      (html || '<section class="panel"><p class="empty">Los proveedores y precios aparecerán al completar la primera compra.</p></section>') + '</div>';
+    var buscar = $('#supplierSearch');
+    if (buscar) buscar.oninput = function () {
+      var q = buscar.value.trim().toLowerCase();
+      document.querySelectorAll('#supplierCatalog tr[data-texto]').forEach(function (tr) { tr.hidden = q && tr.dataset.texto.indexOf(q) < 0; });
+      document.querySelectorAll('#supplierCatalog [data-grupo]').forEach(function (g) { g.hidden = !g.querySelector('tr[data-texto]:not([hidden])'); });
+    };
+    P.sincronizado();
+  }
+
+  P.vistas.materials = { crumb: 'COSTOS Y PRESUPUESTOS / MATERIALES', titulo: 'Materiales', render: pintarMateriales };
+  P.vistas.suppliers = { crumb: 'COSTOS Y PRESUPUESTOS / PROVEEDORES', titulo: 'Proveedores', render: pintarProveedores };
+})();
+
+</script>
+<script>
+/* ===== calculadoras-v2.js ===== */
+/* PP CORE V2 · Calculadoras de construcción (acero, concreto, mortero, mampostería, excavación, cimbra, pisos, pintura y escaleras).
+   Misma lógica y diseño de la V1. Son herramientas de consulta: no modifican catálogos ni presupuestos. */
+(function(){
+  'use strict';
+  var bars={
+    '0.25':{label:'1/4" (No. 2.5)',kgm:.251},
+    '2.5':{label:'5/16" (No. 2.5)',kgm:.384},
+    '3':{label:'3/8" (No. 3)',kgm:.560},
+    '4':{label:'1/2" (No. 4)',kgm:.996},
+    '5':{label:'5/8" (No. 5)',kgm:1.560},
+    '6':{label:'3/4" (No. 6)',kgm:2.250},
+    '8':{label:'1" (No. 8)',kgm:3.975},
+    '10':{label:'1 1/4" (No. 10)',kgm:6.225},
+    '12':{label:'1 1/2" (No. 12)',kgm:8.938}
+  };
+  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function n(v){var x=Number(v);return Number.isFinite(x)?x:0}
+  function fmt(v,d){return n(v).toLocaleString('es-MX',{minimumFractionDigits:d==null?2:d,maximumFractionDigits:d==null?2:d})}
+  function selectBars(name,def){def=def||'3';return '<select name="'+name+'">'+Object.keys(bars).map(function(k){return '<option value="'+k+'"'+(k===def?' selected':'')+'>'+esc(bars[k].label)+'</option>'}).join('')+'</select>'}
+  function input(name,label,value,step){return '<label>'+label+'<input name="'+name+'" type="number" min="0" step="'+(step||'any')+'" value="'+value+'"></label>'}
+  function steel(){
+    return '<div class="calc-card" data-calc="steel"><div class="calc-card-head"><div><p class="eyebrow">CALCULADORA DE ACERO</p><h3>Varillas, estribos y alambre recocido</h3><p class="subtitle">Cada bloque entrega su propio resultado para formar después los insumos del material compuesto.</p></div></div><div class="calc-grid"><section class="calc-block"><h4>1. Varilla de estructura</h4><div class="calc-form-grid">'+input('mainQty','Cantidad de varillas',4,'1')+input('mainLength','Longitud por varilla (m)',1,'0.01')+input('mainHook','Gancho por extremo (m)',0.05,'0.01')+'<label>No. de varilla'+selectBars('mainBar','3')+'</label></div><div class="calc-result calc-final-result" data-main-result></div></section><section class="calc-block"><h4>2. Estribos y alambrón</h4><div class="calc-form-grid">'+input('sectionLength','Largo de sección (m)',0.08,'0.01')+input('sectionWidth','Ancho de sección (m)',0.16,'0.01')+input('cover','Recubrimiento (m)',0.015,'0.001')+input('stirrupHook','Gancho total (m)',0.05,'0.01')+input('structureLength','Longitud de estructura (m)',4,'0.01')+input('spacing','Separación de estribos (m)',0.15,'0.01')+'<label>No. de varilla'+selectBars('stirrupBar','0.25')+'</label></div><div class="calc-result calc-final-result" data-stirrup-result></div></section><section class="calc-block"><h4>3. Alambre recocido</h4><div class="calc-form-grid">'+input('tieLength','Largo de una lazada (m)',0.175,'0.001')+input('tiesPerStirrup','Amarres por estribo',4,'1')+input('stirrupCount','Cantidad de estribos (0 = automática)',0,'1')+input('wireKgm','Peso del alambre (kg/m)',0.0143,'0.0001')+'</div><div class="calc-result calc-final-result" data-wire-result></div></section></div></div>';
+  }
+  function concrete(){return '<div class="calc-card" data-calc="concrete"><p class="eyebrow">CALCULADORA DE CONCRETO</p><h3>Volumen y componentes de referencia</h3><p class="subtitle">Calcula el volumen geométrico y muestra una dosificación editable de referencia por m³.</p><div class="calc-form-grid">'+input('concreteLength','Largo (m)',1,'0.01')+input('concreteWidth','Ancho (m)',1,'0.01')+input('concreteHeight','Espesor / alto (m)',0.10,'0.01')+input('concreteWaste','Desperdicio (%)',5,'0.1')+'</div><div class="calc-result calc-final-result" data-concrete-result></div><p class="calc-note">La dosificación debe confirmarse según resistencia, diseño estructural y especificaciones de la obra.</p></div>'}
+  function mortar(){return '<div class="calc-card" data-calc="mortar"><p class="eyebrow">CALCULADORA DE MORTERO</p><h3>Volumen de mortero para muro o aplanado</h3><p class="subtitle">Estimación rápida con espesor y desperdicio; la dosificación se puede ajustar al criterio de la obra.</p><div class="calc-form-grid">'+input('mortarLength','Largo del área (m)',1,'0.01')+input('mortarHeight','Alto del área (m)',1,'0.01')+input('mortarThickness','Espesor (m)',0.015,'0.001')+input('mortarWaste','Desperdicio (%)',10,'0.1')+'</div><div class="calc-result calc-final-result" data-mortar-result></div><p class="calc-note">Resultado en m³ de mortero húmedo. No sustituye la dosificación validada para el acabado específico.</p></div>'}
+  function masonry(){return '<div class="calc-card" data-calc="masonry"><p class="eyebrow">CALCULADORA DE MAMPOSTERÍA</p><h3>Bloques o tabiques y mortero</h3><p class="subtitle">Estimación por área de muro, tamaño de pieza, junta y desperdicio.</p><div class="calc-form-grid">'+input('wallLength','Largo del muro (m)',4,'0.01')+input('wallHeight','Alto del muro (m)',2.5,'0.01')+input('blockLength','Largo de pieza (m)',0.40,'0.01')+input('blockHeight','Alto de pieza (m)',0.20,'0.01')+input('joint','Junta promedio (m)',0.01,'0.001')+input('masonryWaste','Desperdicio (%)',5,'0.1')+'</div><div class="calc-result calc-final-result" data-masonry-result></div><p class="calc-note">El mortero se muestra como referencia de juntas; puede ajustarse al sistema constructivo.</p></div>'}
+  function excavation(){return '<div class="calc-card" data-calc="excavation"><p class="eyebrow">CALCULADORA DE EXCAVACIÓN</p><h3>Excavación y relleno</h3><p class="subtitle">Obtén el volumen geométrico y una estimación con desperdicio o sobreexcavación.</p><div class="calc-form-grid">'+input('excLength','Largo (m)',4,'0.01')+input('excWidth','Ancho (m)',0.60,'0.01')+input('excDepth','Profundidad (m)',0.80,'0.01')+input('excWaste','Sobreexcavación (%)',5,'0.1')+'</div><div class="calc-result calc-final-result" data-exc-result></div></div>'}
+  function formwork(){return '<div class="calc-card" data-calc="formwork"><p class="eyebrow">CALCULADORA DE CIMBRA</p><h3>Área de contacto y hojas</h3><p class="subtitle">Para una trabe o elemento rectangular con fondo y dos caras laterales.</p><div class="calc-form-grid">'+input('formLength','Longitud (m)',4,'0.01')+input('formWidth','Ancho (m)',0.20,'0.01')+input('formHeight','Peralte / alto (m)',0.40,'0.01')+input('sheetArea','Área útil por hoja (m²)',2.9768,'0.01')+'</div><div class="calc-result calc-final-result" data-form-result></div><p class="calc-note">No incluye puntales ni ciclos de reutilización; se agregan después según el sistema de cimbra.</p></div>'}
+  function floors(){return '<div class="calc-card" data-calc="floors"><p class="eyebrow">CALCULADORA DE PISOS</p><h3>Piezas, cajas y desperdicio</h3><p class="subtitle">Calcula piezas para piso o azulejo a partir del área y formato.</p><div class="calc-form-grid">'+input('floorLength','Largo del área (m)',4,'0.01')+input('floorWidth','Ancho del área (m)',3,'0.01')+input('tileLength','Largo de pieza (m)',0.60,'0.01')+input('tileWidth','Ancho de pieza (m)',0.60,'0.01')+input('tileWaste','Desperdicio (%)',8,'0.1')+input('piecesBox','Piezas por caja',4,'1')+'</div><div class="calc-result calc-final-result" data-floor-result></div></div>'}
+  function paint(){return '<div class="calc-card" data-calc="paint"><p class="eyebrow">CALCULADORA DE PINTURA</p><h3>Litros por superficie y manos</h3><p class="subtitle">Considera área, huecos, número de manos, rendimiento y desperdicio.</p><div class="calc-form-grid">'+input('paintLength','Largo del muro (m)',4,'0.01')+input('paintHeight','Alto del muro (m)',2.5,'0.01')+input('paintOpenings','Huecos / puertas (m²)',2,'0.01')+input('paintCoats','Número de manos',2,'1')+input('paintYield','Rendimiento (m²/L)',8,'0.1')+input('paintWaste','Desperdicio (%)',10,'0.1')+'</div><div class="calc-result calc-final-result" data-paint-result></div></div>'}
+  function stairs(){return '<div class="calc-card" data-calc="stairs"><p class="eyebrow">CALCULADORA DE ESCALERAS</p><h3>Huella, peralte y recorrido</h3><p class="subtitle">Revisión geométrica inicial para una escalera recta.</p><div class="calc-form-grid">'+input('stairHeight','Desnivel total (m)',2.8,'0.01')+input('stairRiser','Peralte (m)',0.175,'0.001')+input('stairTread','Huella (m)',0.28,'0.01')+input('stairWidth','Ancho (m)',1,'0.01')+'</div><div class="calc-result calc-final-result" data-stair-result></div><p class="calc-note">La geometría final debe revisarse con las normas y condiciones particulares de la obra.</p></div>'}
+  function genericEvents(root,k){function v(x){var e=root.querySelector('[name="'+x+'"]');return n(e&&e.value)}var resultKey={excavation:'exc',formwork:'form',floors:'floor',stairs:'stair'}[k]||k;function out(html){var e=root.querySelector('[data-'+resultKey+'-result]');if(e)e.innerHTML=html}function calc(){if(k==='masonry'){var area=v('wallLength')*v('wallHeight'),piece=(v('blockLength')+v('joint'))*(v('blockHeight')+v('joint')),qty=piece?Math.ceil(area/piece*(1+v('masonryWaste')/100)):0;out('<span class="calc-final-label">RESULTADO FINAL · MAMPOSTERÍA</span><strong>'+fmt(qty,0)+' piezas</strong><small>Área: '+fmt(area,2)+' m² · Mortero de juntas: referencia por revisar</small>')}else if(k==='excavation'){var vol=v('excLength')*v('excWidth')*v('excDepth');out('<span class="calc-final-label">RESULTADO FINAL · EXCAVACIÓN</span><strong>'+fmt(vol*(1+v('excWaste')/100),3)+' m³</strong><small>Volumen neto: '+fmt(vol,3)+' m³ · Incluye sobreexcavación</small>')}else if(k==='formwork'){var a=v('formLength')*(2*v('formHeight')+v('formWidth'));out('<span class="calc-final-label">RESULTADO FINAL · CIMBRA</span><strong>'+fmt(a,2)+' m² de contacto</strong><small>Hojas estimadas: '+fmt(v('sheetArea')?Math.ceil(a/v('sheetArea')):0,0)+' piezas</small>')}else if(k==='floors'){var a=v('floorLength')*v('floorWidth'),p=v('tileLength')*v('tileWidth'),q=p?Math.ceil(a/p*(1+v('tileWaste')/100)):0;out('<span class="calc-final-label">RESULTADO FINAL · PISO / AZULEJO</span><strong>'+fmt(q,0)+' piezas</strong><small>Área: '+fmt(a,2)+' m² · Cajas: '+fmt(v('piecesBox')?Math.ceil(q/v('piecesBox')):0,0)+'</small>')}else if(k==='paint'){var a=Math.max(0,v('paintLength')*v('paintHeight')-v('paintOpenings')),lit=v('paintYield')?a*v('paintCoats')/v('paintYield')*(1+v('paintWaste')/100):0;out('<span class="calc-final-label">RESULTADO FINAL · PINTURA</span><strong>'+fmt(lit,2)+' litros</strong><small>Superficie neta: '+fmt(a,2)+' m² · '+fmt(v('paintCoats'),0)+' manos</small>')}else if(k==='stairs'){var steps=v('stairRiser')?Math.ceil(v('stairHeight')/v('stairRiser')):0,run=steps*v('stairTread');out('<span class="calc-final-label">RESULTADO FINAL · ESCALERA</span><strong>'+fmt(steps,0)+' peraltes · '+fmt(run,2)+' m de recorrido</strong><small>Peralte: '+fmt(v('stairHeight')/Math.max(1,steps),3)+' m · Huella: '+fmt(v('stairTread'),2)+' m</small>')}}root.querySelectorAll('input').forEach(function(e){e.oninput=calc});calc()}
+  function wireEvents(root){
+    function val(name){var e=root.querySelector('[name="'+name+'"]');return n(e&&e.value)}
+    function result(){
+      var main=val('mainQty')*(val('mainLength')+2*val('mainHook')),mainKg=main*(bars[val('mainBar')]||bars['3']).kgm;
+      var stirrupLength=Math.max(0,(val('sectionLength')-2*val('cover'))*2)+Math.max(0,(val('sectionWidth')-2*val('cover'))*2)+2*val('stirrupHook'),count=val('spacing')?Math.ceil(val('structureLength')/val('spacing')):0,stirrupM=stirrupLength*count,stirrupKg=stirrupM*(bars[val('stirrupBar')]||bars['3']).kgm;
+      var wirePerTie=val('tieLength')*2*val('wireKgm'),wireKg=wirePerTie*val('tiesPerStirrup')*(val('stirrupCount')||count),total=mainKg+stirrupKg+wireKg;
+      root.querySelector('[data-main-result]').innerHTML='<span class="calc-final-label">RESULTADO FINAL · VARILLA DE ESTRUCTURA</span><strong>'+fmt(mainKg,2)+' kg</strong><small>Longitud total: '+fmt(main,2)+' m</small>';
+      root.querySelector('[data-stirrup-result]').innerHTML='<span class="calc-final-label">RESULTADO FINAL · ESTRIBOS Y ALAMBRÓN</span><strong>'+fmt(stirrupKg,2)+' kg</strong><small>'+fmt(count,0)+' piezas · '+fmt(stirrupLength,3)+' m por estribo</small>';
+      root.querySelector('[data-wire-result]').innerHTML='<span class="calc-final-label">RESULTADO FINAL · ALAMBRE RECOCIDO</span><strong>'+fmt(wireKg,3)+' kg</strong><small>'+fmt(val('stirrupCount')||count,0)+' estribos · '+fmt(wirePerTie,4)+' kg por amarre</small>';
+    }
+    root.querySelectorAll('input,select').forEach(function(e){e.addEventListener('input',result);e.addEventListener('change',result)});result();
+  }
+  function render(host){
+    var app=document.querySelector('#app');if(!app||document.querySelector('[data-construction-calculators]'))return;
+    var wrap=document.createElement('div');wrap.className='construction-calculators';wrap.setAttribute('data-construction-calculators','1');
+    wrap.innerHTML='<button class="button secondary" type="button" data-toggle-calcs>Calculadoras de construcción</button>';
+    var head=host||app.querySelector('.view-head');if(head)head.appendChild(wrap);else app.appendChild(wrap);
+    var toggle=wrap.querySelector('[data-toggle-calcs]');toggle.onclick=function(){
+      var dlg=document.querySelector('#constructionCalculatorsDialog');
+      if(!dlg){dlg=document.createElement('dialog');dlg.id='constructionCalculatorsDialog';dlg.style.cssText='width:min(980px,calc(100vw - 32px));max-width:980px;padding:0;border:0;border-radius:14px;overflow:hidden';dlg.innerHTML='<div class="dialog-head"><div><p class="eyebrow">MATERIALES COMPUESTOS</p><h2>Calculadoras de construcción</h2></div><button type="button" class="icon" data-close>×</button></div><div style="padding:14px 18px 18px;max-height:78vh;overflow:auto"><div class="calc-tabs"><button class="tab active" data-show-calc="steel">Acero</button><button class="tab" data-show-calc="concrete">Concreto</button><button class="tab" data-show-calc="mortar">Mortero</button><button class="tab" data-show-calc="masonry">Mampostería</button><button class="tab" data-show-calc="excavation">Excavación</button><button class="tab" data-show-calc="formwork">Cimbra</button><button class="tab" data-show-calc="floors">Pisos</button><button class="tab" data-show-calc="paint">Pintura</button><button class="tab" data-show-calc="stairs">Escaleras</button></div><div data-calc-body>'+steel()+'</div></div>';var st=document.createElement('style');st.textContent='#constructionCalculatorsDialog .calc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}#constructionCalculatorsDialog .calc-block,#constructionCalculatorsDialog .calc-card{padding:12px;border:1px solid #dbe5e1;border-radius:10px;background:#f7faf9}#constructionCalculatorsDialog .calc-block h4,#constructionCalculatorsDialog .calc-card h3{margin:0 0 8px;font-size:15px}#constructionCalculatorsDialog .calc-card>.subtitle{margin:0 0 10px;font-size:12px}#constructionCalculatorsDialog .calc-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}#constructionCalculatorsDialog label{font-size:11px;color:#64747a;font-weight:700}#constructionCalculatorsDialog input,#constructionCalculatorsDialog select{width:100%;box-sizing:border-box;margin-top:3px;padding:6px 7px;font-size:13px;border:1px solid #ccd9d5;border-radius:6px;background:#fff}#constructionCalculatorsDialog .calc-result{margin-top:9px;padding-top:8px;border-top:1px solid #dbe5e1;font-size:12px;line-height:1.45}#constructionCalculatorsDialog .calc-total{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:10px;padding:10px 12px;border-radius:8px;background:#eaf3ef;font-size:13px}#constructionCalculatorsDialog .calc-total span{font-size:11px;color:#64747a;text-align:right}#constructionCalculatorsDialog .calc-final-result{border:2px solid #e56b38!important;background:#fff5ed!important;color:#17303a;padding:10px!important;min-height:72px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}#constructionCalculatorsDialog .calc-final-result .calc-final-label{display:block;color:#c84f1f;font-size:10px;font-weight:800;letter-spacing:.12em;margin-bottom:4px}#constructionCalculatorsDialog .calc-final-result strong{display:block;font-size:16px;line-height:1.2}#constructionCalculatorsDialog .calc-final-result small{display:block;margin-top:5px;font-size:11px;line-height:1.3;color:#64747a}@media(max-width:760px){#constructionCalculatorsDialog .calc-grid{grid-template-columns:1fr}#constructionCalculatorsDialog .calc-total{display:block}#constructionCalculatorsDialog .calc-total span{display:block;text-align:left;margin-top:5px}}';dlg.appendChild(st);document.body.appendChild(dlg);dlg.querySelector('[data-close]').onclick=function(){dlg.close()}}
+      var body=dlg.querySelector('[data-calc-body]');function show(k){body.innerHTML=k==='steel'?steel():k==='concrete'?concrete():k==='mortar'?mortar():k==='masonry'?masonry():k==='excavation'?excavation():k==='formwork'?formwork():k==='floors'?floors():k==='paint'?paint():stairs();dlg.querySelectorAll('[data-show-calc]').forEach(function(b){b.classList.toggle('active',b.dataset.showCalc===k)});if(k==='steel')wireEvents(body.querySelector('[data-calc="steel"]'));else if(k==='concrete')concreteEvents(body);else if(k==='mortar')mortarEvents(body);else genericEvents(body.querySelector('[data-calc="'+k+'"]'),k)}
+      dlg.querySelectorAll('[data-show-calc]').forEach(function(b){b.onclick=function(){show(b.dataset.showCalc)}});show('steel');dlg.showModal();
+    };
+  }
+  function concreteEvents(root){var calc=function(){var v=n(root.querySelector('[name="concreteLength"]').value)*n(root.querySelector('[name="concreteWidth"]').value)*n(root.querySelector('[name="concreteHeight"]').value),w=v*(1+n(root.querySelector('[name="concreteWaste"]').value)/100);root.querySelector('[data-concrete-result]').innerHTML='<span class="calc-final-label">RESULTADO FINAL</span><strong>Volumen con desperdicio: '+fmt(w,3)+' m³</strong><small>Volumen neto: '+fmt(v,3)+' m³ · El desperdicio ya está incluido.</small><small>La dosificación de cemento, arena, grava y agua se definirá según la resistencia requerida.</small>'};root.querySelectorAll('input').forEach(function(e){e.oninput=calc});calc()}
+  function mortarEvents(root){var calc=function(){var v=n(root.querySelector('[name="mortarLength"]').value)*n(root.querySelector('[name="mortarHeight"]').value)*n(root.querySelector('[name="mortarThickness"]').value),w=v*(1+n(root.querySelector('[name="mortarWaste"]').value)/100);root.querySelector('[data-mortar-result]').innerHTML='<span class="calc-final-label">RESULTADO FINAL</span><strong>Mortero con desperdicio: '+fmt(w,3)+' m³</strong><small>Mortero neto: '+fmt(v,3)+' m³ · El desperdicio ya está incluido.</small>'};root.querySelectorAll('input').forEach(function(e){e.oninput=calc});calc()}
+  window.renderConstructionCalculators=render;
+})();
+
+</script>
+<script>
+/* ===== apu-v2.js ===== */
+/* PP CORE V2 · Análisis de precios unitarios: matrices y conceptos, materiales compuestos y tablas de rendimientos.
+   El precio unitario lo calcula la base con los precios vigentes del catálogo (misma fórmula de la V1). */
+(function () {
+  'use strict';
+  var P = window.PPV2, db = P.db, esc = P.esc, $ = function (s) { return document.querySelector(s); };
+  var UNIDADES = ['m²', 'm³', 'ml', 'pza', 'kg', 'jornada', 'lote', 'servicio'];
+  var TIPO_LINEA = { material: 'Material', compuesto: 'Material compuesto', mano_obra: 'Mano de obra', maquinaria: 'Equipo / herramienta' };
+  var estado = { tab: 'catalog', detalle: null };
+
+  function num(v) { var n = Number(v); return isFinite(n) ? n : 0; }
+  function dinero(v) { return new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 2 }).format(num(v)); }
+  function porFamilia(a, b) { return String(a).localeCompare(String(b), 'es'); }
+
+  /* ---------- Estilos (los mismos de la V1) ---------- */
+  function estilos() {
+    if (document.getElementById('ppApuV2Styles')) return;
+    var s = document.createElement('style'); s.id = 'ppApuV2Styles';
+    s.textContent = '.apu-flow-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}.apu-flow-tabs button{cursor:pointer}.apu-flow-tabs .active{background:var(--accent,#e56b38);color:#fff;border-color:var(--accent,#e56b38)}.apu-flow-family{margin:20px 0 9px;font-size:15px}.apu-flow-subfamily{margin:14px 0 7px;font-size:13px;color:#52666d}.apu-flow-row{cursor:pointer}.apu-flow-row:hover{background:#f5faf8}.apu-flow-dialog{width:min(980px,calc(100vw - 24px));max-width:980px;padding:0;border:0;border-radius:14px;overflow:hidden}.apu-flow-dialog form{margin:0}.apu-flow-body{padding:18px;max-height:78vh;overflow:auto}.apu-flow-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.apu-flow-grid .wide{grid-column:span 2}.apu-flow-lines{margin-top:18px}.apu-flow-lines .line{display:grid;grid-template-columns:135px minmax(180px,1fr) 90px 90px 110px 110px 32px;gap:7px;align-items:end;margin:8px 0}.apu-flow-lines label{font-size:11px;font-weight:700;color:#62747a}.apu-flow-lines input,.apu-flow-lines select{width:100%;box-sizing:border-box}.apu-flow-lines .valor{font-size:13px;padding:9px 0}.apu-flow-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}.apu-flow-summary div{padding:10px;border:1px solid var(--line,#dbe5e1);border-radius:8px;background:#f8fbfa}.apu-flow-summary b{display:block;font-size:15px;margin-top:4px}.apu-flow-total{background:#eaf6f1!important;border-color:#b9dfd0!important}.apu-flow-note{font-size:12px;color:var(--muted,#64747a)}.apu-flow-add{margin:10px 0}.apu-flow-dialog textarea{min-height:76px;resize:vertical}.apu-detail-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:10px}.apu-detail-grid strong{display:block;margin-top:4px}@media(max-width:850px){.apu-flow-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.apu-flow-lines{overflow:auto}.apu-flow-lines .line{min-width:760px}.apu-flow-summary,.apu-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.apu-flow-grid{grid-template-columns:1fr}.apu-flow-grid .wide{grid-column:span 1}}';
+    document.head.appendChild(s);
+  }
+
+  /* ---------- Datos ---------- */
+  var recursos = { material: [], mano_obra: [], maquinaria: [], compuesto: [] }, familias = [];
+  async function cargarRecursos() {
+    var r = await Promise.all([db.from('materiales').select('id,nombre,unidad,tipo,precio_presupuesto,familias_material(nombre)').eq('activo', true).order('nombre'),
+      db.from('vista_compuestos').select('id,nombre,unidad,precio_vigente,familia_id').order('nombre'), db.from('familias_material').select('id,nombre').order('nombre')]);
+    recursos = { material: [], mano_obra: [], maquinaria: [], compuesto: [] };
+    (r[0].data || []).forEach(function (m) { (recursos[m.tipo] || recursos.material).push({ id: m.id, nombre: m.nombre, unidad: m.unidad, precio: num(m.precio_presupuesto), familia: (m.familias_material && m.familias_material.nombre) || 'Sin familia' }); });
+    (r[1].data || []).forEach(function (c) { recursos.compuesto.push({ id: c.id, nombre: c.nombre, unidad: c.unidad, precio: num(c.precio_vigente), familia: 'Materiales compuestos' }); });
+    familias = r[2].data || [];
+  }
+  function recurso(tipo, id) { return (recursos[tipo] || []).filter(function (x) { return x.id === id; })[0] || { id: id, nombre: 'Recurso no disponible', unidad: '', precio: 0 }; }
+  function opciones(tipo, elegido) {
+    var g = {}; (recursos[tipo] || []).forEach(function (x) { (g[x.familia] = g[x.familia] || []).push(x); });
+    var out = '<option value="">Selecciona un recurso</option>';
+    Object.keys(g).sort(porFamilia).forEach(function (f) {
+      out += '<optgroup label="' + esc(f) + '">' + g[f].sort(function (a, b) { return porFamilia(a.nombre, b.nombre); }).map(function (x) {
+        return '<option value="' + esc(x.id) + '"' + (elegido === x.id ? ' selected' : '') + '>' + esc(x.nombre) + ' · ' + esc(x.unidad) + ' · ' + dinero(x.precio) + '</option>'; }).join('') + '</optgroup>';
+    });
+    return out;
+  }
+
+  // Misma fórmula de la V1 (en la base se calcula igual; esta copia es solo para ver el resultado mientras capturas)
+  function calcular(lineas, p) {
+    var s = { material: 0, mano_obra: 0, maquinaria: 0 };
+    lineas.forEach(function (l) { var r = recurso(l.tipo, l.recurso), b = l.tipo === 'compuesto' ? 'material' : l.tipo; s[b] += num(l.cantidad) * (1 + num(l.desperdicio) / 100) * r.precio; });
+    var directo = s.material + s.mano_obra + s.maquinaria, herr = directo * num(p.tool) / 100, seg = s.mano_obra * num(p.safety) / 100, mae = s.mano_obra * num(p.master) / 100;
+    var base = directo + herr + seg + mae, io = base * num(p.io) / 100, ic = base * num(p.ic) / 100, ind = io + ic, fin = (base + ind) * num(p.fin) / 100;
+    var ut = (base + ind + fin) * num(p.ut) / 100, ad = (base + ind + fin + ut) * num(p.ad) / 100, ot = (base + ind + fin + ut + ad) * num(p.ot) / 100;
+    return { materiales: s.material, mano_obra: s.mano_obra, equipo: s.maquinaria, herramienta: herr, seguridad: seg, maestro: mae, directo: directo, indirectos: ind, financiamiento: fin, utilidad: ut, adicionales: ad + ot, total: base + ind + fin + ut + ad + ot };
+  }
+
+  /* ---------- Estructura de la pantalla ---------- */
+  function pagina(titulo, subtitulo, activa, accion, migas) {
+    estilos(); var app = $('#app');
+    $('#pageTitle').textContent = titulo; $('#crumb').textContent = migas || 'COSTOS Y PRESUPUESTOS / ANÁLISIS DE PRECIOS UNITARIOS';
+    app.innerHTML = '<div class="view-head"><div><p class="eyebrow">ANÁLISIS DE PRECIOS UNITARIOS</p><h2>' + esc(titulo) + '</h2><p class="subtitle">' + esc(subtitulo) + '</p></div>' + (accion || '') + '</div>' +
+      '<div class="apu-flow-tabs" role="tablist"><button type="button" class="tab ' + (activa === 'catalog' ? 'active' : '') + '" data-flow-tab="catalog">Matrices y conceptos APU</button><button type="button" class="tab ' + (activa === 'compounds' ? 'active' : '') + '" data-flow-tab="compounds">Materiales compuestos</button><button type="button" class="tab ' + (activa === 'performance' ? 'active' : '') + '" data-flow-tab="performance">Tablas de rendimientos</button><button type="button" class="tab ' + (activa === 'calculators' ? 'active' : '') + '" data-flow-tab="calculators">Calculadoras de materiales</button></div><div id="apuFlowContent"></div>';
+    app.querySelectorAll('[data-flow-tab]').forEach(function (b) { b.onclick = function () { estado.tab = b.dataset.flowTab; estado.detalle = null; pintar(app); }; });
+    return $('#apuFlowContent');
+  }
+  async function pintar(app) {
+    try { await cargarRecursos(); } catch (e) { app.innerHTML = '<section class="panel"><div class="empty">No se pudo cargar: ' + esc(e.message) + '</div></section>'; return; }
+    if (estado.tab === 'compounds') await pintarCompuestos(); else if (estado.tab === 'performance') await pintarRendimientos(); else if (estado.tab === 'calculators') pintarCalculadoras();
+    else if (estado.detalle) await pintarDetalle(estado.detalle); else await pintarCatalogo();
+    P.sincronizado();
+  }
+
+  /* ---------- Matrices y conceptos APU ---------- */
+  async function pintarCatalogo() {
+    var admin = P.esAdmin(), r = await db.from('vista_apus').select('*').order('clave');
+    var raiz = pagina('Matrices y conceptos APU', 'Crea matrices de análisis y conviértelas en conceptos listos para Presupuestos.', 'catalog', admin ? '<button type="button" class="button primary" data-flow-new>+ Nueva matriz / concepto</button>' : '');
+    var items = r.data || [], g = {};
+    items.forEach(function (x) { var p = (x.partida || 'Sin partida').trim() || 'Sin partida', s = (x.subpartida || 'Sin subpartida').trim() || 'Sin subpartida'; ((g[p] = g[p] || {})[s] = ((g[p][s]) || []).concat([x])); });
+    var html = '<section class="panel"><p class="apu-flow-note"><b>Flujo:</b> arma la matriz con recursos de los catálogos, revisa el precio unitario y guárdala como concepto. El presupuesto podrá consumir la clave y, al aceptarse, congelará sus importes.</p></section>';
+    Object.keys(g).sort(porFamilia).forEach(function (p) {
+      html += '<h3 class="apu-flow-family">Partida: ' + esc(p) + '</h3>';
+      Object.keys(g[p]).sort(porFamilia).forEach(function (s) {
+        html += '<h4 class="apu-flow-subfamily">Subpartida: ' + esc(s) + '</h4><section class="panel table-wrap"><table class="table"><thead><tr><th>CLAVE</th><th>CONCEPTO / MATRIZ</th><th>UNIDAD</th><th>RENDIMIENTO</th><th>COSTO DIRECTO</th><th>PRECIO UNITARIO</th><th>ESTADO</th></tr></thead><tbody>' +
+          g[p][s].map(function (x) { return '<tr class="apu-flow-row" data-flow-open="' + esc(x.id) + '"><td><b>' + esc(x.clave || '—') + '</b></td><td><b>' + esc(x.concepto) + '</b><small>' + esc(x.alcance || '') + '</small></td><td>' + esc(x.unidad) + '</td><td>' + num(x.rendimiento) +
+            '</td><td>' + dinero(x.costo_directo) + '</td><td><b>' + dinero(x.precio_unitario) + '</b></td><td>' + (x.estado === 'baja' ? 'Baja' : 'Vigente') + '</td></tr>'; }).join('') + '</tbody></table></section>';
+      });
+    });
+    if (!items.length) html += '<section class="panel"><p class="apu-flow-note">Aún no hay matrices. Crea la primera para iniciar tu catálogo de conceptos.</p></section>';
+    raiz.innerHTML = html;
+    var nuevo = $('[data-flow-new]'); if (nuevo) nuevo.onclick = function () { editorApu(null); };
+    raiz.querySelectorAll('[data-flow-open]').forEach(function (f) { f.onclick = function () { estado.detalle = f.dataset.flowOpen; pintar($('#app')); }; });
+  }
+
+  async function pintarDetalle(id) {
+    var r = await Promise.all([db.from('vista_apus').select('*').eq('id', id).single(), db.from('apu_componentes').select('*').eq('apu_id', id).order('orden')]);
+    var x = r[0].data; if (!x) { estado.detalle = null; return pintarCatalogo(); }
+    var lineas = r[1].data || [];
+    var raiz = pagina(x.concepto, 'Detalle de la matriz y sus recursos.', 'catalog', '<button type="button" class="button secondary" data-flow-back>← Regresar</button> ' + (P.esAdmin() ? '<button type="button" class="button primary" data-flow-edit>Editar</button>' : ''));
+    var filas = lineas.map(function (l) {
+      var rec = recurso(l.tipo, l.tipo === 'compuesto' ? l.compuesto_id : l.material_id), imp = num(l.cantidad) * (1 + num(l.desperdicio_pct) / 100) * rec.precio;
+      return '<tr><td>' + esc(TIPO_LINEA[l.tipo]) + '</td><td>' + esc(rec.nombre) + '</td><td>' + esc(rec.unidad) + '</td><td>' + num(l.cantidad) + '</td><td>' + num(l.desperdicio_pct) + '%</td><td>' + dinero(rec.precio) + '</td><td>' + dinero(imp) + '</td></tr>'; }).join('');
+    raiz.innerHTML = '<section class="panel"><div class="apu-detail-grid"><div><span class="eyebrow">CLAVE</span><strong>' + esc(x.clave || '—') + '</strong></div><div><span class="eyebrow">PARTIDA</span><strong>' + esc(x.partida || '—') + '</strong></div><div><span class="eyebrow">SUBPARTIDA</span><strong>' + esc(x.subpartida || '—') +
+      '</strong></div><div><span class="eyebrow">UNIDAD</span><strong>' + esc(x.unidad) + '</strong></div></div><p>' + esc(x.alcance || 'Sin alcance descrito.') + '</p></section>' +
+      '<section class="panel table-wrap"><h3>Integración de la matriz</h3><table class="table"><thead><tr><th>TIPO</th><th>RECURSO</th><th>UNIDAD</th><th>CANTIDAD</th><th>DESPERDICIO</th><th>PRECIO</th><th>IMPORTE</th></tr></thead><tbody>' + (filas || '<tr><td colspan="7">Sin recursos.</td></tr>') + '</tbody></table></section>' +
+      '<section class="apu-flow-summary"><div>Materiales<b>' + dinero(x.materiales) + '</b></div><div>Mano de obra<b>' + dinero(x.mano_obra) + '</b></div><div>Equipo / herramienta<b>' + dinero(x.equipo) + '</b></div><div>Herramienta menor<b>' + dinero(x.herramienta) + '</b></div><div>Equipo de seguridad<b>' + dinero(x.seguridad) + '</b></div><div>Maestro / encargado<b>' + dinero(x.maestro) +
+      '</b></div><div>Indirectos<b>' + dinero(x.indirectos) + '</b></div><div>Financiamiento<b>' + dinero(x.financiamiento) + '</b></div><div>Utilidad<b>' + dinero(x.utilidad) + '</b></div><div>Cargos adicionales y otros<b>' + dinero(num(x.cargos_adicionales) + num(x.otros_cargos)) + '</b></div><div>Costo directo<b>' + dinero(x.costo_directo) + '</b></div><div class="apu-flow-total">Precio unitario para presupuesto<b>' + dinero(x.precio_unitario) + '</b></div></section>';
+    $('[data-flow-back]').onclick = function () { estado.detalle = null; pintar($('#app')); };
+    var ed = $('[data-flow-edit]'); if (ed) ed.onclick = function () { editorApu(x, lineas); };
+  }
+
+  function editorApu(viejo, lineasViejas) {
+    var lineas = (lineasViejas || []).map(function (l) { return { tipo: l.tipo, recurso: l.tipo === 'compuesto' ? l.compuesto_id : l.material_id, cantidad: num(l.cantidad), desperdicio: num(l.desperdicio_pct) }; });
+    var d = document.createElement('dialog'); d.className = 'apu-flow-dialog';
+    var pct = function (n, t, ayuda) { return '<label>' + t + '<input name="' + n + '" type="number" min="0" step="0.01" value="0">' + (ayuda ? '<small>' + ayuda + '</small>' : '') + '</label>'; };
+    d.innerHTML = '<form><div class="dialog-head"><div><p class="eyebrow">ANÁLISIS DE PRECIOS UNITARIOS</p><h2>' + (viejo ? 'Editar matriz / concepto APU' : 'Nueva matriz / concepto APU') + '</h2></div><button type="button" class="icon" data-close>×</button></div><div class="apu-flow-body"><div class="apu-flow-grid">' +
+      '<label>Tipo de registro<select name="recordType"><option value="matriz">Matriz de análisis</option><option value="concepto">Concepto APU</option></select></label><label>Clave automática<input name="code" readonly placeholder="Se asigna al guardar"></label>' +
+      '<label class="wide">Nombre del concepto<input name="concept" required placeholder="Ej. Suministro y colocación de concreto f’c=250 kg/cm²"></label><label>Partida<input name="partida" required placeholder="Ej. Concretos"></label><label>Subpartida<input name="subpartida" placeholder="Ej. Elementos estructurales"></label>' +
+      '<label>Unidad<select name="unit">' + UNIDADES.map(function (u) { return '<option>' + esc(u) + '</option>'; }).join('') + '</select></label><label>Rendimiento<input name="performance" type="number" min="0.0001" step="any" value="1"><small>Referencia de ejecución por unidad.</small></label>' +
+      '<label class="wide">Alcance / descripción<textarea name="scope" placeholder="Describe qué incluye el concepto y sus límites de medición."></textarea></label></div>' +
+      '<p class="apu-flow-note">Los recursos se eligen de un solo listado y cada renglón se clasifica como Material, Material compuesto, Mano de obra o Equipo / herramienta. Las listas aparecen agrupadas por familia. La cantidad por unidad es la dosis que integra una unidad del concepto; el precio usado es el vigente en cada catálogo.</p>' +
+      '<div class="apu-flow-lines"><div class="panel-title-row"><h3>Integración de la matriz</h3><button type="button" class="button secondary apu-flow-add" data-add-line>+ Agregar insumo</button></div><div data-lines></div></div>' +
+      '<div class="apu-flow-grid" style="margin-top:16px">' + pct('tool', 'Herramienta menor (%)', 'Sobre costo directo.') + pct('safety', 'Equipo de seguridad (%)', 'Sobre mano de obra.') + pct('master', 'Maestro / encargado (%)', 'Sobre mano de obra.') + pct('io', 'Indirectos de oficina (%)') + pct('ic', 'Indirectos de campo (%)') + pct('fin', 'Financiamiento (%)') + pct('ut', 'Utilidad (%)') + pct('ad', 'Cargos adicionales (%)') + pct('ot', 'Otros cargos (%)') + '</div>' +
+      '<div class="apu-flow-summary"><div>Materiales<b data-sum="materiales">$0.00</b></div><div>Mano de obra<b data-sum="mano_obra">$0.00</b></div><div>Equipo / herramienta<b data-sum="equipo">$0.00</b></div><div>Equipo de seguridad<b data-sum="seguridad">$0.00</b></div><div>Maestro / encargado<b data-sum="maestro">$0.00</b></div><div>Costo directo<b data-sum="directo">$0.00</b></div><div class="apu-flow-total">Precio unitario para presupuesto<b data-sum="total">$0.00</b></div></div>' +
+      '<p class="settings-message" data-msg style="color:var(--red)"></p></div><div class="dialog-actions"><button type="button" class="button secondary" data-cancel>Cancelar</button><button type="submit" class="button primary">Guardar matriz</button></div></form>';
+    document.body.appendChild(d);
+    var f = d.querySelector('form'), cont = d.querySelector('[data-lines]'), msg = d.querySelector('[data-msg]');
+    if (viejo) {
+      f.elements.recordType.value = viejo.tipo_registro; f.elements.code.value = viejo.clave || ''; f.elements.concept.value = viejo.concepto; f.elements.partida.value = viejo.partida || ''; f.elements.subpartida.value = viejo.subpartida || '';
+      f.elements.unit.value = viejo.unidad; f.elements.performance.value = viejo.rendimiento; f.elements.scope.value = viejo.alcance || '';
+    }
+    function parametros() { var o = {}; ['tool', 'safety', 'master', 'io', 'ic', 'fin', 'ut', 'ad', 'ot'].forEach(function (k) { o[k] = f.elements[k].value; }); return o; }
+    if (viejo) {
+      // porcentajes: la vista no los expone, se leen del registro
+      db.from('apus').select('*').eq('id', viejo.id).single().then(function (r) {
+        var a = r.data; if (!a) return;
+        var m = { tool: 'herramienta_menor_pct', safety: 'seguridad_pct', master: 'maestro_pct', io: 'indirecto_oficina_pct', ic: 'indirecto_campo_pct', fin: 'financiamiento_pct', ut: 'utilidad_pct', ad: 'cargos_adicionales_pct', ot: 'otros_pct' };
+        Object.keys(m).forEach(function (k) { f.elements[k].value = num(a[m[k]]); }); resumen();
+      });
+    }
+    function resumen() { var c = calcular(lineas, parametros()); d.querySelectorAll('[data-sum]').forEach(function (b) { b.textContent = dinero(c[b.dataset.sum]); }); }
+    function dibujar() {
+      cont.innerHTML = lineas.map(function (l, i) {
+        var r = recurso(l.tipo, l.recurso), imp = num(l.cantidad) * (1 + num(l.desperdicio) / 100) * r.precio;
+        return '<div class="line" data-line="' + i + '"><label>Tipo<select data-line-type>' + Object.keys(TIPO_LINEA).map(function (k) { return '<option value="' + k + '"' + (l.tipo === k ? ' selected' : '') + '>' + TIPO_LINEA[k] + '</option>'; }).join('') + '</select></label>' +
+          '<label>Recurso<select data-line-resource>' + opciones(l.tipo, l.recurso) + '</select></label><label>Cantidad por unidad<input data-line-qty type="number" min="0" step="any" value="' + num(l.cantidad) + '"></label><label>Desperdicio %<input data-line-waste type="number" min="0" step="0.01" value="' + num(l.desperdicio) + '"></label>' +
+          '<label>P.U. vigente<div class="valor">' + dinero(r.precio) + '</div></label><label>Importe<div class="valor">' + dinero(imp) + '</div></label><button type="button" class="icon" data-line-remove title="Quitar">×</button></div>';
+      }).join('') || '<p class="apu-flow-note">Agrega al menos un insumo.</p>';
+      cont.querySelectorAll('.line').forEach(function (el) {
+        var i = Number(el.dataset.line);
+        el.querySelector('[data-line-type]').onchange = function (e) { lineas[i].tipo = e.target.value; lineas[i].recurso = ''; dibujar(); };
+        el.querySelector('[data-line-resource]').onchange = function (e) { lineas[i].recurso = e.target.value; dibujar(); };
+        el.querySelector('[data-line-qty]').oninput = function (e) { lineas[i].cantidad = e.target.value; resumen(); el.querySelectorAll('.valor')[1].textContent = dinero(num(e.target.value) * (1 + num(lineas[i].desperdicio) / 100) * recurso(lineas[i].tipo, lineas[i].recurso).precio); };
+        el.querySelector('[data-line-waste]').oninput = function (e) { lineas[i].desperdicio = e.target.value; resumen(); el.querySelectorAll('.valor')[1].textContent = dinero(num(lineas[i].cantidad) * (1 + num(e.target.value) / 100) * recurso(lineas[i].tipo, lineas[i].recurso).precio); };
+        el.querySelector('[data-line-remove]').onclick = function () { lineas.splice(i, 1); dibujar(); };
+      });
+      resumen();
+    }
+    d.querySelector('[data-add-line]').onclick = function () { lineas.push({ tipo: 'material', recurso: '', cantidad: 1, desperdicio: 0 }); dibujar(); };
+    f.addEventListener('input', function (e) { if (!e.target.closest('.line')) resumen(); });
+    d.querySelector('[data-close]').onclick = function () { d.close(); }; d.querySelector('[data-cancel]').onclick = function () { d.close(); };
+    d.addEventListener('close', function () { d.remove(); });
+    f.onsubmit = async function (e) {
+      e.preventDefault(); msg.textContent = '';
+      if (lineas.some(function (l) { return !l.recurso; })) { msg.textContent = 'Elige el recurso de cada renglón o quita los renglones vacíos.'; return; }
+      var p = parametros();
+      var datos = { tipo_registro: f.elements.recordType.value, concepto: f.elements.concept.value.trim(), partida: f.elements.partida.value.trim(), subpartida: f.elements.subpartida.value.trim() || null, unidad: f.elements.unit.value,
+        rendimiento: num(f.elements.performance.value) || 1, alcance: f.elements.scope.value.trim() || null, herramienta_menor_pct: num(p.tool), seguridad_pct: num(p.safety), maestro_pct: num(p.master), indirecto_oficina_pct: num(p.io),
+        indirecto_campo_pct: num(p.ic), financiamiento_pct: num(p.fin), utilidad_pct: num(p.ut), cargos_adicionales_pct: num(p.ad), otros_pct: num(p.ot) };
+      if (!datos.concepto || !datos.partida) { msg.textContent = 'Escribe el nombre del concepto y la partida.'; return; }
+      var r = await db.rpc('guardar_apu', { p_id: viejo ? viejo.id : null, p_datos: datos, p_lineas: lineas.map(function (l) { return { tipo: l.tipo, material_id: l.tipo === 'compuesto' ? null : l.recurso, compuesto_id: l.tipo === 'compuesto' ? l.recurso : null, cantidad: num(l.cantidad), desperdicio_pct: num(l.desperdicio) }; }) });
+      if (r.error) { msg.textContent = 'No se pudo guardar: ' + r.error.message; return; }
+      d.close(); estado.detalle = r.data || (viejo && viejo.id) || null; pintar($('#app'));
+    };
+    d.showModal(); dibujar();
+  }
+
+  /* ---------- Materiales compuestos ---------- */
+  async function pintarCompuestos() {
+    var admin = P.esAdmin(), r = await db.from('vista_compuestos').select('*').order('nombre'), fam = {};
+    familias.forEach(function (x) { fam[x.id] = x.nombre; });
+    var raiz = pagina('Materiales compuestos', 'Dosificaciones reutilizables que pueden integrarse como recursos en una matriz APU.', 'compounds', admin ? '<button type="button" class="button primary" data-flow-new-compound>+ Nuevo material compuesto</button>' : '');
+    var items = r.data || [], g = {};
+    items.forEach(function (x) { var f = fam[x.familia_id] || 'Sin familia'; (g[f] = g[f] || []).push(x); });
+    var html = '<section class="panel"><p class="apu-flow-note">Cada material compuesto conserva su clave, unidad, rendimiento y dosificación. Sus precios se recalculan con el catálogo vigente de Materiales.</p></section>';
+    Object.keys(g).sort(porFamilia).forEach(function (f) {
+      html += '<h3 class="apu-flow-family">Familia: ' + esc(f) + '</h3><section class="panel table-wrap"><table class="table"><thead><tr><th>CLAVE</th><th>MATERIAL COMPUESTO</th><th>UNIDAD</th><th>RENDIMIENTO</th><th>COMPONENTES</th><th>PRECIO VIGENTE</th></tr></thead><tbody>' +
+        g[f].map(function (x) { return '<tr class="apu-flow-row" data-compound-flow-open="' + esc(x.id) + '"><td><b>' + esc(x.codigo || '—') + '</b></td><td><b>' + esc(x.nombre) + '</b></td><td>' + esc(x.unidad) + '</td><td>' + num(x.rendimiento) + '</td><td>' + num(x.componentes) + '</td><td><b>' + dinero(x.precio_vigente) + '</b></td></tr>'; }).join('') + '</tbody></table></section>';
+    });
+    if (!items.length) html += '<section class="panel"><p class="apu-flow-note">Aún no hay materiales compuestos registrados.</p></section>';
+    raiz.innerHTML = html;
+    var nuevo = $('[data-flow-new-compound]'); if (nuevo) nuevo.onclick = function () { editorCompuesto(null); };
+    raiz.querySelectorAll('[data-compound-flow-open]').forEach(function (f) { f.onclick = function () { if (admin) editorCompuesto(items.filter(function (x) { return x.id === f.dataset.compoundFlowOpen; })[0]); }; });
+  }
+
+  async function editorCompuesto(viejo) {
+    var comps = [];
+    if (viejo) { var c = await db.from('compuesto_componentes').select('material_id,cantidad').eq('compuesto_id', viejo.id); comps = (c.data || []).map(function (x) { return { material: x.material_id, cantidad: num(x.cantidad) }; }); }
+    var d = document.createElement('dialog'); d.className = 'apu-flow-dialog';
+    d.innerHTML = '<form><div class="dialog-head"><div><p class="eyebrow">ANÁLISIS DE PRECIOS UNITARIOS</p><h2>' + (viejo ? 'Editar material compuesto' : 'Nuevo material compuesto') + '</h2></div><button type="button" class="icon" data-close>×</button></div><div class="apu-flow-body"><div class="apu-flow-grid">' +
+      '<label>Clave automática<input name="code" readonly placeholder="Se asigna al guardar"></label><label class="wide">Nombre<input name="name" required></label><label>Familia<input name="family" list="cmpFamilies" placeholder="Ej. Concretos"></label><label>Unidad<input name="unit" required value="m³"></label>' +
+      '<label>Rendimiento<input name="yield" type="number" min="0.01" step="0.01" value="1"></label></div><datalist id="cmpFamilies">' + familias.map(function (x) { return '<option value="' + esc(x.nombre) + '">'; }).join('') + '</datalist>' +
+      '<div class="apu-flow-lines"><div class="panel-title-row"><h3>Componentes</h3><button type="button" class="button secondary apu-flow-add" data-add-comp>+ Agregar componente</button></div><div data-comps></div></div>' +
+      '<div class="apu-flow-summary"><div class="apu-flow-total">Precio vigente por unidad<b data-total>$0.00</b></div></div><p class="settings-message" data-msg style="color:var(--red)"></p></div><div class="dialog-actions"><button type="button" class="button secondary" data-cancel>Cancelar</button>' +
+      (viejo ? '<button type="button" class="button danger" data-delete>Eliminar</button>' : '') + '<button type="submit" class="button primary">Guardar material</button></div></form>';
+    document.body.appendChild(d);
+    var f = d.querySelector('form'), cont = d.querySelector('[data-comps]'), msg = d.querySelector('[data-msg]');
+    if (viejo) { f.elements.code.value = viejo.codigo || ''; f.elements.name.value = viejo.nombre; f.elements.unit.value = viejo.unidad; f.elements.yield.value = viejo.rendimiento; f.elements.family.value = (familias.filter(function (x) { return x.id === viejo.familia_id; })[0] || {}).nombre || ''; }
+    function total() { var s = comps.reduce(function (n, c) { return n + num(c.cantidad) * recurso('material', c.material).precio; }, 0); d.querySelector('[data-total]').textContent = dinero(s / Math.max(0.0001, num(f.elements.yield.value) || 1)); }
+    function dibujar() {
+      cont.innerHTML = comps.map(function (c, i) {
+        var r = recurso('material', c.material);
+        return '<div class="line" data-comp="' + i + '" style="grid-template-columns:minmax(220px,1fr) 120px 110px 110px 32px"><label>Material<select data-comp-material>' + opciones('material', c.material) + '</select></label><label>Cantidad<input data-comp-qty type="number" min="0" step="any" value="' + num(c.cantidad) +
+          '"></label><label>P.U. vigente<div class="valor">' + dinero(r.precio) + '</div></label><label>Importe<div class="valor">' + dinero(num(c.cantidad) * r.precio) + '</div></label><button type="button" class="icon" data-comp-remove title="Quitar">×</button></div>';
+      }).join('') || '<p class="apu-flow-note">Agrega los materiales de la dosificación.</p>';
+      cont.querySelectorAll('.line').forEach(function (el) {
+        var i = Number(el.dataset.comp);
+        el.querySelector('[data-comp-material]').onchange = function (e) { comps[i].material = e.target.value; dibujar(); };
+        el.querySelector('[data-comp-qty]').oninput = function (e) { comps[i].cantidad = e.target.value; total(); el.querySelectorAll('.valor')[1].textContent = dinero(num(e.target.value) * recurso('material', comps[i].material).precio); };
+        el.querySelector('[data-comp-remove]').onclick = function () { comps.splice(i, 1); dibujar(); };
+      });
+      total();
+    }
+    d.querySelector('[data-add-comp]').onclick = function () { comps.push({ material: '', cantidad: 1 }); dibujar(); };
+    f.elements.yield.oninput = total;
+    d.querySelector('[data-close]').onclick = function () { d.close(); }; d.querySelector('[data-cancel]').onclick = function () { d.close(); };
+    d.addEventListener('close', function () { d.remove(); });
+    var borrar = d.querySelector('[data-delete]');
+    if (borrar) borrar.onclick = async function () {
+      if (!confirm('¿Eliminar este material compuesto?')) return;
+      var r = await db.from('materiales_compuestos').delete().eq('id', viejo.id);
+      if (r.error) { msg.textContent = r.error.message; return; } d.close(); pintar($('#app'));
+    };
+    f.onsubmit = async function (e) {
+      e.preventDefault(); msg.textContent = '';
+      var nombre = f.elements.name.value.trim(); if (!nombre) { msg.textContent = 'Captura el nombre del material compuesto.'; return; }
+      if (comps.some(function (c) { return !c.material; })) { msg.textContent = 'Elige el material de cada componente o quita los renglones vacíos.'; return; }
+      var famNombre = f.elements.family.value.trim(), famId = null;
+      if (famNombre) {
+        var ex = familias.filter(function (x) { return x.nombre.toLowerCase() === famNombre.toLowerCase(); })[0];
+        if (ex) famId = ex.id; else { var nf = await db.from('familias_material').insert({ nombre: famNombre }).select('id').single(); if (nf.error) { msg.textContent = nf.error.message; return; } famId = nf.data.id; }
+      }
+      var r = await db.rpc('guardar_compuesto', { p_id: viejo ? viejo.id : null, p_datos: { nombre: nombre, unidad: f.elements.unit.value.trim() || 'Unidad', familia_id: famId, rendimiento: num(f.elements.yield.value) || 1 },
+        p_componentes: comps.map(function (c) { return { material_id: c.material, cantidad: num(c.cantidad) }; }) });
+      if (r.error) { msg.textContent = 'No se pudo guardar: ' + r.error.message; return; }
+      d.close(); pintar($('#app'));
+    };
+    d.showModal(); dibujar();
+  }
+
+  /* ---------- Calculadoras de materiales (consulta; no alteran catálogos ni presupuestos) ---------- */
+  function pintarCalculadoras() {
+    var raiz = pagina('Calculadoras de materiales', 'Herramientas para cuantificar insumos sin alterar tus catálogos ni presupuestos.', 'calculators', '<span data-calculator-launch></span>', 'COSTOS Y PRESUPUESTOS / CALCULADORAS');
+    raiz.innerHTML = '<section class="panel"><div class="panel-title-row"><div><h3>Calculadoras disponibles</h3><p class="subtitle">Selecciona “Calculadoras de construcción” y elige la especialidad.</p></div></div>' +
+      '<div class="detail-grid"><div><span class="eyebrow">ESTRUCTURA</span><strong>Acero y concreto</strong></div><div><span class="eyebrow">ALBAÑILERÍA</span><strong>Mortero y mampostería</strong></div><div><span class="eyebrow">OBRA CIVIL</span><strong>Excavación y cimbra</strong></div><div><span class="eyebrow">ACABADOS</span><strong>Pisos y pintura</strong></div></div>' +
+      '<p class="change" style="margin-top:16px">También incluye una revisión geométrica inicial para escaleras. Los resultados son auxiliares y deben validarse conforme al proyecto y sus especificaciones.</p></section>';
+    var anfitrion = $('[data-calculator-launch]');
+    if (typeof window.renderConstructionCalculators === 'function') window.renderConstructionCalculators(anfitrion);
+  }
+
+  /* ---------- Tablas de rendimientos (las captura el despacho; ninguna viene precargada) ---------- */
+  async function pintarRendimientos() {
+    var admin = P.esAdmin(), r = await db.from('tablas_rendimiento').select('*').order('actividad');
+    var raiz = pagina('Tablas de rendimientos', 'Referencias de mano de obra y materiales para apoyar la integración de matrices.', 'performance', admin ? '<button type="button" class="button primary" data-flow-new-performance>+ Nueva tabla</button>' : '');
+    var items = r.data || [], g = {};
+    items.forEach(function (x) { var f = x.familia || 'Sin familia'; (g[f] = g[f] || []).push(x); });
+    var html = '<section class="panel"><div class="panel-title-row"><div><b>Consulta de rendimientos</b><p class="apu-flow-note">Estas tablas sirven como referencia. La cantidad definitiva se captura en la matriz del concepto.</p></div><button type="button" class="button secondary" data-flow-calculators>Calculadoras de construcción</button></div></section>';
+    Object.keys(g).sort(porFamilia).forEach(function (f) {
+      html += '<h3 class="apu-flow-family">Familia: ' + esc(f) + '</h3><section class="panel table-wrap"><table class="table"><thead><tr><th>CLAVE</th><th>ACTIVIDAD</th><th>TIPO</th><th>UNIDAD</th><th>RENDIMIENTO</th><th>NOTAS</th></tr></thead><tbody>' +
+        g[f].map(function (x) { return '<tr class="apu-flow-row" data-performance-flow-open="' + esc(x.id) + '"><td><b>' + esc(x.codigo || '—') + '</b></td><td><b>' + esc(x.actividad) + '</b></td><td>' + (x.tipo === 'material' ? 'Material' : 'Mano de obra') + '</td><td>' + esc(x.unidad) + '</td><td>' + num(x.rendimiento) + '</td><td>' + esc(x.notas || '') + '</td></tr>'; }).join('') + '</tbody></table></section>';
+    });
+    if (!items.length) html += '<section class="panel"><p class="apu-flow-note">Aún no hay tablas de rendimientos registradas. Captura las tuyas con «+ Nueva tabla».</p></section>';
+    raiz.innerHTML = html;
+    var nuevo = $('[data-flow-new-performance]'); if (nuevo) nuevo.onclick = function () { editorRendimiento(null); };
+    var calc = $('[data-flow-calculators]'); if (calc) calc.onclick = function () { estado.tab = 'calculators'; pintar($('#app')); };
+    raiz.querySelectorAll('[data-performance-flow-open]').forEach(function (f) { f.onclick = function () { if (admin) editorRendimiento(items.filter(function (x) { return x.id === f.dataset.performanceFlowOpen; })[0]); }; });
+  }
+  function editorRendimiento(viejo) {
+    var d = document.createElement('dialog'); d.className = 'apu-flow-dialog'; d.style.maxWidth = '620px';
+    d.innerHTML = '<form><div class="dialog-head"><div><p class="eyebrow">ANÁLISIS DE PRECIOS UNITARIOS</p><h2>' + (viejo ? 'Editar tabla de rendimiento' : 'Nueva tabla de rendimiento') + '</h2></div><button type="button" class="icon" data-close>×</button></div><div class="apu-flow-body"><div class="apu-flow-grid">' +
+      '<label>Clave automática<input name="code" readonly placeholder="Se asigna al guardar"></label><label class="wide">Actividad<input name="name" required></label><label>Familia<input name="family" placeholder="Ej. Albañilería"></label>' +
+      '<label>Tipo de rendimiento<select name="type"><option value="mano_obra">Mano de obra</option><option value="material">Material</option></select></label><label>Unidad<input name="unit" required value="m²/día"></label>' +
+      '<label>Rendimiento<input name="performance" type="number" min="0" step="0.01" required></label><label class="wide">Notas<textarea name="notes"></textarea></label></div><p class="settings-message" data-msg style="color:var(--red)"></p></div>' +
+      '<div class="dialog-actions"><button type="button" class="button secondary" data-cancel>Cancelar</button>' + (viejo ? '<button type="button" class="button danger" data-delete>Eliminar</button>' : '') + '<button type="submit" class="button primary">Guardar tabla</button></div></form>';
+    document.body.appendChild(d);
+    var f = d.querySelector('form'), msg = d.querySelector('[data-msg]');
+    if (viejo) { f.elements.code.value = viejo.codigo || ''; f.elements.name.value = viejo.actividad; f.elements.family.value = viejo.familia || ''; f.elements.type.value = viejo.tipo; f.elements.unit.value = viejo.unidad; f.elements.performance.value = viejo.rendimiento; f.elements.notes.value = viejo.notas || ''; }
+    d.querySelector('[data-close]').onclick = function () { d.close(); }; d.querySelector('[data-cancel]').onclick = function () { d.close(); };
+    d.addEventListener('close', function () { d.remove(); });
+    var borrar = d.querySelector('[data-delete]');
+    if (borrar) borrar.onclick = async function () { if (!confirm('¿Eliminar esta tabla?')) return; var r = await db.from('tablas_rendimiento').delete().eq('id', viejo.id); if (r.error) { msg.textContent = r.error.message; return; } d.close(); pintar($('#app')); };
+    f.onsubmit = async function (e) {
+      e.preventDefault(); msg.textContent = '';
+      var fila = { actividad: f.elements.name.value.trim(), familia: f.elements.family.value.trim() || null, tipo: f.elements.type.value, unidad: f.elements.unit.value.trim() || 'Unidad', rendimiento: num(f.elements.performance.value), notas: f.elements.notes.value.trim() || null };
+      if (!fila.actividad) { msg.textContent = 'Escribe la actividad.'; return; }
+      var r = viejo ? await db.from('tablas_rendimiento').update(fila).eq('id', viejo.id).select('id').single() : await db.from('tablas_rendimiento').insert(fila).select('id').single();
+      if (r.error) { msg.textContent = 'No se pudo guardar: ' + r.error.message; return; }
+      d.close(); pintar($('#app'));
+    };
+    d.showModal();
+  }
+
+  P.vistas.apu = { crumb: 'COSTOS Y PRESUPUESTOS / ANÁLISIS DE PRECIOS UNITARIOS', titulo: 'Análisis de precios unitarios', alEntrar: function () { estado.tab = 'catalog'; estado.detalle = null; }, render: pintar };
+})();
+
+</script>
 </body></html>
